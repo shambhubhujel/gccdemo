@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import morgan from 'morgan';
 import colors from 'colors';
@@ -24,7 +25,7 @@ import ConnectDB from './db';
 // Connect to database
 ConnectDB();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(express.static('public'));
 // Body parser
@@ -44,7 +45,7 @@ app.use(helmet());
 // Prevent XSS attacks
 app.use(xss());
 
-// Enable CORS
+// Enable CORS //"test": "mocha --recursive tests --exit"
 app.use(cors());
 
 // Rate limiting
