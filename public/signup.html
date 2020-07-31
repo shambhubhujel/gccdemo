@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Green Commercial Cleaning</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/green_commercial_logo.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/LoaderOnlystyle.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body id="form-body">
+
+    <!-- sign up/ create account -->
+    <div id="signuploading"></div>
+    <div id="signup" class="loginbox">
+        <a href="./index.html"><img src="./images/logo/green_commercial_logo.png" width="120px" height="120px" alt="Green Commercial Logo"></a>
+        <h1>
+            <u> Signup Form</u>
+        </h1>
+        <form>
+            <label for="fullname">Full Name</label>
+            <input type="text" name="" placeholder="Enter Full Name" id="signup_fullname" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" name="" placeholder="Enter Email Address" id="signup_email" required>
+
+            <label for="address">Home Address</label>
+            <input type="text" name="" placeholder="Enter Location" id="signup_address" >
+
+            <label for="company">Company</label>
+            <input type="text" name="" placeholder="Enter Company" id="signup_company" required>
+
+            <label for="age">Age</label>
+            <input type="text" name="" placeholder="Enter Age" id="signup_age" >
+
+            <label for="phone">Phone</label>
+            <input type="text" name="" placeholder="Enter Phone" id="signup_phone" required>
+
+            <label for="password">Password</label>
+            <input type="password" name="signup_password" maxlength="25" minlength="5" placeholder="Enter Password"
+                id="signup_password" required>
+            <p class="message-log">Password must be with at-least 5 characters. </p>
+
+            <label for="password">Conform Password</label>
+            <input type="password" name="signup_password_conform" onkeyup="Validate()" placeholder="Re-enter Password"
+                id="signup_conform_password" required>
+            <p class="message-cred">Password Does't Matched.</p>
+            <input type="submit" name="" id="Register" value="Sign Up">
+            <a href="./login.html" class="btn">Already have a account ?</a>
+
+        </form>
+    </div>
+    <script src="./js/handleAuth.js"></script>
+</body>
+
+</html>

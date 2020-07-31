@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo/green_commercial_logo.png" type="image/png" />
+
+    <title>Green Commercial Cleaning </title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="../../css/LoaderOnlystyle.css">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../build/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/custom.css">
+
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar" style="border: 0;">
+                        <a href="index.html" class="site_title"><u>Green Commercial Cleaning</u>
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div  class="menu_section">
+                          <ul id="showhideMenus" class="nav side-menu">
+
+                          </ul>
+
+                        </div>
+
+                      </div>
+                    <!-- /sidebar menu -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <nav class="nav navbar-nav">
+                        <ul class=" navbar-right">
+                            <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                <a href="javascript:;" id="adminUser"class="user-profile dropdown-toggle" aria-haspopup="true"
+                                    id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="" alt="">User Name
+                                </a>
+                                <div class="dropdown-menu dropdown-usermenu pull-right"
+                                    aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="profile.html"> Profile</a>
+                                    <a class="dropdown-item" id="logout"><i class="fa fa-sign-out pull-right"></i>
+                                        Log Out</a>
+                                </div>
+                            </li>
+                            <li class="nav-item open" style="padding-top: 6px;">
+                                <a href="../../index.html">Goto Site</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <div id="runLoader"></div>
+
+                <form id="addWorkDone" validate>
+                    <select id="workaddress" class="form-control form-control-sm" >
+                    </select>
+                    <!-- <div class="row mt-4 mb-4">
+                        <div class="col-md-3">
+                            <label for="fullname"><b>Full Name</b></label>
+                            <input name="name" type="text " id="fullname" class="form-control form-control-sm"
+                                placeholder="Enter Full Name" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="workaddress"><b>Work Location/Address</b></label>
+                            <input name="address" type="text" id="workaddress" class="form-control form-control-sm"
+                                placeholder="Enter Worked Address" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="workDate"><b>work Date</b></label>
+                            <input name="workDate" type="date" id="workDate" class="form-control form-control-sm"
+                                placeholder="Enter Work Date" required>
+                        </div>
+                        <div class="col-md-3">
+                            <labe></labe>
+                            <button type="submit" class="btn btn-dark btn-sm mt-4 ">Save</button>
+                            <button type="reset" class="btn btn-dark btn-sm mt-4 ">Reset</button>
+
+                        </div>
+
+                    </div> -->
+                </form>
+
+                <!-- Alert Info -->
+                <div id="alertInfo" class="row alert__info">
+                    <div class="alert alert-success alert-dismissible col-md-12 col-sm-12" role="alert">
+                        <h4 id="alertSuccessMsg" class="text-center">
+
+                        </h4>
+                    </div>
+                </div>
+                <!-- Alert Info End -->
+
+                <!-- Alert Error -->
+                <div id="alertError" class="row alert__info">
+                    <div class="alert alert-danger alert-dismissible col-md-12 col-sm-12" role="alert">
+                        <h4 id="alertErrorMsg" class="text-center">
+
+                        </h4>
+                    </div>
+                </div>
+                <!-- Alert Error End -->
+
+                <div class=" row">
+
+                    <!-- details table home start here-->
+                    <div class="col-md-12 col-sm-12 ">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Work Done Report </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card-box table-responsive">
+                                            <table id="workDoneTable" class="table table-striped table-bordered"
+                                                style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Worked Location / Address</th>
+                                                        <th>Images</th>
+                                                        <th>Date</th>
+                                                        <th>Start Shift</th>
+                                                        <th>End Shift</th>
+                                                        <th>Finish Shift</th>
+                                                    </tr>
+                                                </thead>
+
+
+                                                <tbody id="workDoneTBody">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- details table home end here -->
+
+                </div>
+
+
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    Green Commercial Cleaning by <a href="https:softtechmultimedia.com">SoftTech Multimedia Pvt.
+                        Ltd.
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+
+        <!-- Edit Image Modal -->
+            <div id="finishShiftModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div id="modalTitle" class="modal-header">
+                    <h4 class="modal-title">End Shift</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                </div>
+                    <div class="modal-body pb-0">
+                    <form id="finishShift" validate>
+                        <div class="row ">
+                        <div class="col-12">
+                            <label for="myfile"><b>Images (Multiple Access)</b></label>
+                            <input name="work_image" type="file" id="myfile" class="form-control form-control-sm"
+                                accept="image/png, image/jpeg" multiple required>
+                        </div>
+
+                        <div class="modal-footer col-12 mt-4">
+                            <div class="col-sm-6 col-xs-12  ">
+                                <button class="btn btn-default w-100 border" data-dismiss="modal">
+                                    Close</button>
+                            </div>
+                            <div class="col-sm-6 col-xs-12  ">
+                                <button type="submit" class="btn btn-primary w-100  ">Finish Shift</button>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                    </div>
+                </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <!-- Edit Image Modal END!!!-->
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Custom User Scripts -->
+    <script src="./js/customjs/handleBeforeAuth.js"></script>
+    <script src="./js/customjs/handleAfterAuth.js"></script>
+    <script src="./js/customjs/handleWorkDone.js"></script>
+    <script>
+        const loggedAdmin = document.getElementById('adminUser');
+        let output = `
+                    <img src="${window.localStorage.getItem('avatar')}" alt="">${window.localStorage.getItem('loggedadmin')}
+                </a>`;
+
+        loggedAdmin.innerHTML = output;
+    </script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
+
+
+
+</body>
+
+</html>

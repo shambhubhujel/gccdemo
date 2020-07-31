@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo/green_commercial_logo.png" type="image/png" />
+
+    <title>Green Commercial Cleaning </title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/LoaderOnlystyle.css">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../build/css/custom.css" rel="stylesheet">
+    <style>
+       #details > *{
+        font-size: 1.8rem;
+        color: #3f3f3f;
+        font-weight: bold;
+      }
+      #details span {
+        color: rgb(82, 85, 87);
+        font-weight: normal;
+      }
+    </style>
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+          <div class="navbar" style="border: 0;">
+            <a href="index.html" class="site_title"><u>Green Commercial Cleaning</u>
+            </a>
+          </div>
+
+            <div class="clearfix"></div>
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div  class="menu_section">
+                <ul id="showhideMenus" class="nav side-menu">
+
+                </ul>
+
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+          </div>
+        </div>
+
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <div class="nav toggle">
+            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+          </div>
+          <nav class="nav navbar-nav">
+            <ul class=" navbar-right">
+              <li class="nav-item dropdown open" style="padding-left: 15px;">
+
+                <a href="javascript:;" id="adminUser" class="user-profile dropdown-toggle" aria-haspopup="true"
+                  id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+
+                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="profile.html"> Profile</a>
+                    <a class="dropdown-item" id="logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </div>
+              </li>
+              <li class="nav-item open" style="padding-top: 6px;">
+                <a href="../../index.html">Go to Site</a>
+              </li>
+
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>User Profile</h3>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+                <!-- Alert Info -->
+                <div id="alertInfo" class="row alert__info">
+                  <div class="alert alert-success alert-dismissible col-md-12 col-sm-12" role="alert">
+                      <h4 id="alertSuccessMsg" class="text-center">
+
+                      </h4>
+                  </div>
+              </div>
+              <!-- Alert Info End -->
+
+              <!-- Alert Error -->
+              <div id="alertError" class="row alert__info">
+                  <div class="alert alert-danger alert-dismissible col-md-12 col-sm-12" role="alert">
+                      <h4 id="alertErrorMsg" class="text-center">
+
+                      </h4>
+                  </div>
+              </div>
+              <!-- Alert Error End -->
+
+            <div class="row">
+
+              <div id="runLoader"></div>
+              <div class="col-md-12 col-sm-12 text-justify">
+                <div class="x_panel">
+                  <div id="myDetails" class="x_content">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Green Commercial Cleaning by <a href="https:softtechmultimedia.com">SoftTech Multimedia Pvt. Ltd. </a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+
+        <!-- Edit Password Modal -->
+        <div id="editPasswordModal" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div id="modalPasswordTitle" class="modal-header">
+                <h4 class="modal-title">Update Password</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+              <div class="modal-body pb-0">
+                <form id="editPassword" validate>
+                  <div class="row">
+
+                    <div class="col-12 mb-2">
+                      <label class="mb-1" for="detailCurrentPassword"><b>Current Password</b></label>
+                      <input type="password" name="currentPassword" id="modalCurrentPassword" class="form-control form-control-sm" placeholder="Current Password" required>
+                    </div>
+                    <div class="col-12  mb-2">
+                      <label class="mb-1" for="detailNewPassword"><b>New Password</b></label>
+                      <input type="password" name="newPassword" id="modalNewPassword" class="form-control form-control-sm" placeholder="New Password" required>
+                    </div>
+                    <div class="col-12">
+                      <label class="mb-1" for="detailRepeatPassword"><b>Repeat Password</b></label>
+                      <input type="password" name="RepeatPassword" id="modalRepeatPassword" class="form-control form-control-sm" placeholder="Repeat Password" required>
+                    </div>
+
+                    <div class="modal-footer col-12 mt-4">
+                      <div class="col-sm-6 col-xs-12  ">
+                          <button class="btn btn-default w-100 border" data-dismiss="modal">
+                              Close</button>
+                      </div>
+                      <div class="col-sm-6 col-xs-12  ">
+                          <button type="submit" class="btn btn-primary w-100  "> Edit
+                              Password</button>
+                      </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- Edit Password Modal END!!!-->
+
+        <!-- Edit Profile Modal -->
+        <div id="editDetailModal" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div id="modalDetailTitle" class="modal-header">
+                <h4 class="modal-title">Edit Detail</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+              <div class="modal-body pb-0">
+                <form id="editDetail" validate>
+                  <div class="row ">
+
+                    <div class="col-sm-6 col-xs-12">
+                      <label for="detailName"><b>Full Name</b></label>
+                      <input type="text" name="name" id="modalDetailFullName" class="form-control form-control-sm" placeholder="User's Name" required>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                      <label for="detailEmail"><b>Email</b></label>
+                      <input type="email" name="email" id="modalDetailEmail" class="form-control form-control-sm" placeholder="User's Email" required>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                      <label for="detailPhone"><b>Phone</b></label>
+                      <input type="number" name="phone" id="modalDetailPhone" class="form-control form-control-sm" placeholder="User's Phone Number" required>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                      <label for="detaiAddress"><b>Address</b></label>
+                      <input type="text" name="address" id="modalDetailAddress" class="form-control form-control-sm" placeholder="User's Address" required>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                      <label for="detailAge"><b>Age</b></label>
+                      <input type="number" name="age" id="modalDetailAge" class="form-control form-control-sm" placeholder="User's Age" required>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                      <label for="detailStartDate"><b>Start Date</b></label>
+                      <input type="date" name="startDate" id="modalDetailStartDate" class="form-control form-control-sm" required>
+                    </div>
+                    <div class="modal-footer col-12 mt-4">
+                      <div class="col-sm-6 col-xs-12  ">
+                          <button class="btn btn-default w-100 border" data-dismiss="modal">
+                              Close</button>
+                      </div>
+                      <div class="col-sm-6 col-xs-12  ">
+                          <button type="submit" class="btn btn-primary w-100  "> Edit
+                              Detail</button>
+                      </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- Edit User Modal END!!!-->
+
+        <!-- Edit Image Modal -->
+        <div id="editImgModal" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div id="modalTitle" class="modal-header">
+                <h4 class="modal-title">Edit Image</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+              <div class="modal-body pb-0">
+                <form id="editImage" validate>
+                  <div class="row ">
+                    <div class="col-12">
+                      <label for="editImage"><b>Upload
+                                    Image</b></label>
+
+                            <!-- import image from file -->
+                      <input id="modalImg" name="profilePic" name="profilePic" type="file"
+                          class="form-control form-control" placeholder="Subject"
+                          accept="image/png, image/jpeg">
+                    </div>
+
+                    <div class="modal-footer col-12 mt-4">
+                      <div class="col-sm-6 col-xs-12  ">
+                          <button class="btn btn-default w-100 border" data-dismiss="modal">
+                              Close</button>
+                      </div>
+                      <div class="col-sm-6 col-xs-12  ">
+                          <button type="submit" class="btn btn-primary w-100  "> Edit
+                              Image</button>
+                      </div>
+                  </div>
+                  </div>
+                </form>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- Edit Image Modal END!!!-->
+
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+   <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- morris.js -->
+    <script src="../vendors/raphael/raphael.min.js"></script>
+    <script src="../vendors/morris.js/morris.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Custom User Scripts -->
+    <script src="./js/customjs/handleBeforeAuth.js"></script>
+    <script src="./js/customjs/handleAfterAuth.js"></script>
+    <script>
+        const loggedAdmin = document.getElementById('adminUser');
+        let output = `
+                    <img src="${window.localStorage.getItem('avatar')}" alt="">${window.localStorage.getItem('loggedadmin')}
+                </a>`;
+
+        loggedAdmin.innerHTML = output;
+    </script>
+    <script src="./js/customjs/handleProfile.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+  </body>
+</html>

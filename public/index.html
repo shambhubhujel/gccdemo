@@ -1,74 +1,1275 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Node Express web application</title>
-    <meta name="description" content="" />
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/gradients.css" rel="stylesheet">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Green Commercial Cleaning</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/green_commercial_logo.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- All css files are included here. -->
+
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Owl Carousel  main css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/LoaderOnlystyle.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- User style -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body class="">
+<body>
+
+    <!-- Body main wrapper start -->
     <div class="wrapper">
-        <div class="graphics">
-            <div class="tower">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="-11 170 1000 429" enable-background="new -11 170 1000 429" xml:space="preserve">
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M989,595H712v-35c0,0,4.5-1.8,8-3
-                                                                                                  c5.2-1.8,12.5,5.3,22-4c3.4-3.4-0.9-7.8-0.4-10.1c0.7-3.1,4.4-6.8,1.6-11.4c-2.6-4.2-6.9-3.6-8.2-5.5c-1.7-2.3-2.2-6.3-7-9
-                                                                                                  c-5.6-3.1-9.9,0.2-13-1c-2.5-0.9-2.3-5-9-5c-4.8,0-7.2,4.8-10,5c-2.3,0.2-4.9-4.5-10-2c-5.5,2.8-4,7.3-6,9c-1.4,1.2-3.1,3.2-6,4.2
-                                                                                                  c-2.6,0.9-4.9,3-4,8.8c0.6,3.7,6.8,4.1,7.5,6c1,2.9-6.4,6.2-2.5,12c3,4.5,9,1.6,12,1c1.9-0.4,7.1-0.7,8,0c3.4,2.5,9,5,9,5v35
-                                                                                                  l-506-1.5L182.3,444l0.3-0.8v-69.6l-0.2-0.2l12.3-72.3c10.9-2.6,16.5-6.5,16.5-6.5l-5.2-2.9l1.1-5.8l15-3.3l-10.1-3.9l1.2-4.6
-                                                                                                  c-15.8-8.3-32.2-11-32.2-11v-3.6l4.1-6.5h-4.9v-4.4h-8.3V244h-1.2l-1.7-31.2l-1-1.3l-1,1.3l-1.7,31.2h-1.2v4.8h-8.3v4.4h-4.9
-                                                                                                  l4.1,6.5v3.6c0,0-16.5,2.7-32.2,11l1.2,4.6l-10.1,3.9l15,3.3l1.1,5.8l-5.1,2.9c0,0,5.5,3.9,16.4,6.5l12.3,72.4l-0.1,0.1v69.6
-                                                                                                  l0.3,0.8l-14.6,149.4h-1.2H-11"/>
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M8,393.7c0-13.5,12.1-10.8,15.6-14.7
-                                                                                                  c2.8-3.2-1-8.8,9-13.9c7.9-4.1,9.7,1,13.1,0.8c4.5-0.3,3.3-6.7,14.7-6.6c12.7,0.2,11.2,8.4,14.7,10.6c3,1.9,7.9-2.1,13.9,4.1
-                                                                                                  c3.8,4,1.3,7.4,2.5,9.8c2.2,4.4,14.7,0.9,14.7,13.9c0,12.2-13.5,8.3-17.2,10.6c-3.6,2.3-4.4,9.3-13.1,11.5c-8,2-9.5-4-13.9-4.1
-                                                                                                  c-5-0.1-5.5,8.6-18.8,6.6c-12.3-1.9-12.3-9.1-16.4-12.3C21.9,406.3,8,408.6,8,393.7z"/>
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M325.1,313.9c-3.9,3-3.9,10-15.7,11.8
-                                                                                                  c-12.8,2-13.3-6.4-18-6.3c-4.3,0.1-5.7,5.8-13.3,3.9c-8.4-2.1-9.1-8.8-12.5-11c-3.6-2.3-16.5,1.5-16.5-10.2c0-12.4,12-9.1,14.1-13.3
-                                                                                                  c1.1-2.3-1.3-5.6,2.4-9.4c5.8-6,10.4-2.1,13.3-3.9c3.4-2.1,2-10,14.1-10.2c11-0.2,9.9,6,14.1,6.3c3.3,0.2,5-4.7,12.5-0.8
-                                                                                                  c9.6,4.9,6,10.3,8.6,13.3c3.3,3.7,14.9,1.2,14.9,14.1C343.1,312.5,329.8,310.3,325.1,313.9z"/>
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M18.4,229.5c0-13.5,12.1-10.8,15.6-14.7
-                                                                                                  c2.8-3.2-1-8.8,9-13.9c7.9-4.1,9.7,1,13.1,0.8c4.5-0.3,3.3-6.7,14.7-6.6c12.7,0.2,11.2,8.4,14.7,10.6c3,1.9,7.9-2.1,13.9,4.1
-                                                                                                  c3.8,4,1.3,7.4,2.5,9.8c2.2,4.4,14.7,0.9,14.7,13.9c0,12.2-13.5,8.3-17.2,10.6c-3.6,2.3-4.4,9.3-13.1,11.5c-8,2-9.5-4-13.9-4.1
-                                                                                                  c-5-0.1-5.5,8.6-18.8,6.6c-12.3-1.9-12.3-9.1-16.4-12.3C32.2,242.1,18.4,244.4,18.4,229.5z"/>
-                    <path class="path" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M215.8,398.8c0-13.5,12.1-10.8,15.6-14.7
-                                                                                                  c2.8-3.2-1-8.8,9-13.9c7.9-4.1,9.7,1,13.1,0.8c4.5-0.3,3.3-6.7,14.7-6.6c12.7,0.2,11.2,8.4,14.7,10.6c3,1.9,7.9-2.1,13.9,4.1
-                                                                                                  c3.8,4,1.3,7.4,2.5,9.8c2.2,4.4,14.7,0.9,14.7,13.9c0,12.2-13.5,8.3-17.2,10.6c-3.6,2.3-4.4,9.3-13.1,11.5c-8,2-9.5-4-13.9-4.1
-                                                                                                  c-5-0.1-5.5,8.6-18.8,6.6c-12.3-1.9-12.3-9.1-16.4-12.3C229.7,411.3,215.8,413.6,215.8,398.8z"/>
-                </svg>
+        <!-- Start Header Style -->
+        <div id="header" class="htc-header">
+            <!-- Start Header Top -->
+            <div class="htc__header__top bg__cat--1 ptb--10">
+                <div class="container">
+                    <div class="row text-light">
+                        <div class="col-lg-4 col-md-5 col-sm-12 col-12 text-center ">
+                            <p class="text-light text-uppercase ">PROFESSIONAL CLEANING SERVICES YOU CAN
+                                TRUST
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12 ">
+                            <ul class="top-social-icon ">
+                                <li><a href="https://www.facebook.com/greencommercialcleaning/" title="Facebook"> <i
+                                            class="fa fa-facebook "></i>
+                                    </a>
+                                </li>
+                                <li><a href="https://instagram.com" title="Instagram"> <i class="fa fa-instagram"></i>
+                                    </a></li>
+                                <li><a href="https://twitter.com" title="Twitter"> <i class="fa fa-twitter"></i> </a>
+                                </li>
+                                <li><a href="https://youtube.com" title="Youtube"> <i class="fa fa-youtube"></i> </a>
+                                </li>
+                                <li><a href="https://linkedin.com" title="Linkedin"> <i class="fa fa-linkedin"></i> </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <ul class="top-contact">
+                                <li><i class="fa fa-phone"></i> &nbsp;0433639672
+                                </li>
+                                <li> <i class="fa fa-envelope"></i>&nbsp;info@greencommercialcleaning.com.au</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Top -->
+
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-6 col-xs-6">
+                            <div class="logo">
+                                <a href="./index.html">
+                                    <img src="images/logo/green_commercial_logo.png" width="120px" height="auto"
+                                        alt="logo image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-6 col-xs-4">
+                            <nav class="main__menu__nav  hidden-xs hidden-sm">
+                                <ul class="main__menu">
+                                    <li><a class="active" href="index.html">HOME</a>
+                                    </li>
+                                    <li><a href="about.html">ABOUT US</a></li>
+                                    <li><a href="service.html">SERVICES</a></li>
+                                    <li><a href="index.html">BLOGS</a> </li>
+                                    <li><a href="career.html">CAREERS</a> </li>
+                                    <li><a href="contact.html">CONTACT</a></li>
+
+                                </ul>
+                            </nav>
+                            <div class="mobile-menu clearfix visible-xs visible-sm">
+                                <nav id="mobile_dropdown">
+                                    <ul>
+                                        <li><a class="active" href="index.html">Home</a> </li>
+                                        <li><a href="about.html">ABOUT US</a> </li>
+                                        <li><a href="service.html">SERVICES</a> </li>
+                                        <li><a href="index.html">BLOGS</a> </li>
+                                        <li><a href="career.html">CAREERS</a> </li>
+                                        <li><a href="contact.html">CONTACT</a> </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-5 col-xs-6 d-flex ">
+                            <div class="htc__header__search hidden-xs">
+                                <input type="text" placeholder="SEARCH">
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="men__btn xmt-30">
+                                <span id="showhide">
+                                    <!-- <a  class="menu__btn" href="./login.html"> LOGIN</a> -->
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-area"></div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </div>
+        <!-- End Header Style -->
+
+        <!-- Start Slider Area -->
+        <div class="slider__container">
+            <div class="slider__activation__wrap owl-carousel owl-theme">
+                <!-- Start Single Slide -->
+                <div class="slide slider__fixed--height slide__align--center"
+                style="background: rgba(0, 0, 0, 0) url(images/offers/bg-foo.jpg) no-repeat scroll 0 0 / cover;"
+                    data--black__overlay="6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="slider__inner">
+                                    <h4 class="text-uppercase">SINCE 2016</h4>
+                                    <h1 class="text-uppercase">WE BUILD THE TRUST</h1>
+                                    <p>100 % satisfaction for the customers providing better services as well as trust
+                                        worthly values</p>
+                                    <div class="slider__btn">
+                                        <a class="htc__btn" href="./service.html"> What & How We Do</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="waveWrapper waveAnimation">
+                        <div class="waveWrapperInner bgTop">
+                            <div class="wave waveTop"
+                                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')">
+                            </div>
+                        </div>
+                        <div class="waveWrapperInner bgMiddle">
+                            <div class="wave waveMiddle"
+                                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')">
+                            </div>
+                        </div>
+                        <div class="waveWrapperInner bgBottom">
+                            <div class="wave waveBottom"
+                                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End Single Slide -->
+                <!-- Start Single Slide -->
+                <div class="slide slider__fixed--height slide__align--center"
+                    style="background: rgba(0, 0, 0, 0) url(images/offers/Sports_leisure.jpg) no-repeat scroll 0 0 / cover;"
+                    data--black__overlay="6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="slider__inner">
+                                    <h4>SINCE 2016</h4>
+                                    <h1>WE BUILD THE TRUST</h1>
+                                    <p>100 % satisfaction for the customers providing better services as well as trust
+                                        worthly values</p>
+                                    <div class="slider__btn">
+                                        <a class="htc__btn" href="./service.html"> What & How We Do</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="waveWrapper waveAnimation">
+                        <div class="waveWrapperInner bgTop">
+                            <div class="wave waveTop"
+                                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')">
+                            </div>
+                        </div>
+                        <div class="waveWrapperInner bgMiddle">
+                            <div class="wave waveMiddle"
+                                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')">
+                            </div>
+                        </div>
+                        <div class="waveWrapperInner bgBottom">
+                            <div class="wave waveBottom"
+                                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- End Single Slide -->
+
+                <!-- Start Single Slide -->
+                <div class="slide slider__fixed--height slide__align--center"
+                    style="background: rgba(0, 0, 0, 0) url(images/offers/building_management.jpg) no-repeat scroll 0 0 / cover;"
+                    data--black__overlay="6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="slider__inner">
+                                    <h4>SINCE 2016</h4>
+                                    <h1>WE BUILD THE TRUST</h1>
+                                    <p>100 % satisfaction for the customers providing better services as well as trust
+                                        worthly values</p>
+                                    <div class="slider__btn">
+                                        <a class="htc__btn" href="./service.html"> What & How We Do</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="waveWrapper waveAnimation">
+                        <div class="waveWrapperInner bgTop">
+                            <div class="wave waveTop"
+                                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')">
+                            </div>
+                        </div>
+                        <div class="waveWrapperInner bgMiddle">
+                            <div class="wave waveMiddle"
+                                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')">
+                            </div>
+                        </div>
+                        <div class="waveWrapperInner bgBottom">
+                            <div class="wave waveBottom"
+                                style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- End Single Slide -->
 
             </div>
         </div>
+        <!-- End Slider Area -->
 
-        <header>
-            <nav class="website-nav">
-                <ul>
-                    <li><a class="home-link" href="https://aws.amazon.com/">Home</a></li>
-                    <li><a href="https://aws.amazon.com/what-is-cloud-computing/">About</a></li>
-                    <li><a href="https://aws.amazon.com/solutions/">Services</a></li>
-                    <li><a href="https://aws.amazon.com/contact-us/">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div class="message">
-            <a class="twitter-link" href="http://twitter.com/home/?status=I%20created%20a%20project%20with%20AWS%20CodeStar!%20%23AWS%20%23AWSCodeStar%20https%3A%2F%2Faws.amazon.com%2Fcodestar"><img src="img/tweet.svg" /></a>
-            <div class="text">
-                <h1>Congratulations!</h1>
-                <h2>You just created a Node Express web application!</h2>
+        <!-- Start agency Area -->
+        <section class="htc__agency__area htc__agency--2 pb--100 bg__gray">
+            <div class="container">
+                <div class="row">
+                    <!-- first column in a first row -->
+                    <div class="col-md-12 col-lg-6 col-sm-12 mtb--10 col-xs-12">
+                        <div class="agency__about ">
+                            <div class="agency_head mtb--10">
+                                <h3 class="mtb--10 text-small">WELCOME TO OUR</h3>
+                                <h2 class="text-uppercase" style="font-weight: bold; ">Green <span
+                                        class="text--theme">Commercial
+                                        Cleaning</span></h2>
+                            </div>
+                            <div class=" mtb--10 text-justify ">
+                                <p>As we all loves to live in clean and healthy environment but due to our busy
+                                    schedules we might not have much time on these things. Ignoring it can may hamper
+                                    our health and also our surroundings. If you don't have time and interest in
+                                    cleaning your houses and other commercial area, don't worry we, GREEN one of the
+                                    growing company is here to help you by providing quality support services and make
+                                    your house, and office building spotless across Australia within the comfortable
+                                    price.</p>
+                            </div>
+                            <div class="agency__btn mtb--10 ">
+                                <a class="htc__btn" href="./about.html"> Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / first column in a first row end  -->
+
+                    <!-- end column in a first row -->
+                    <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 mtb--10">
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 bar">
+                                <div class="agency__icon">
+                                    <img src="images/others/icon-2/1.png" alt="icon images">
+                                </div>
+                                <div class="agency__details">
+                                    <h2>FLEXIBLE CLEANING PLANS</h2>
+                                    <p>We are here to provide better cleaning facilities with flexible plans to satisfy
+                                        the client with our work</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 xmt-40 bar">
+                                <div class="agency__icon">
+                                    <img src="images/others/icon-2/2.png" alt="icon images">
+                                </div>
+                                <div class="agency__details">
+                                    <h2>VERIFIED EMPLOYEES</h2>
+                                    <p>Better cleaning needs experienced employee so we always ensure on providing
+                                        employee which are verified</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 xmt-40 bar">
+                                <div class="agency__icon">
+                                    <img src="images/others/icon-2/3.png" alt="icon images">
+                                </div>
+                                <div class="agency__details">
+                                    <h2>BEST CUSTOMER SUPPORT</h2>
+                                    <p>Our main focus is to give quality service to our client so we always keep on mind
+                                        to support our client in every possible way</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 xmt-40 bar">
+                                <div class="agency__icon">
+                                    <img src="images/others/icon-2/3.png" alt="icon images">
+                                </div>
+                                <div class="agency__details">
+                                    <h2>GREEN CLEANING SOLUTIONS</h2>
+                                    <p>Around Melbourne for the better cleaning services we are the stop all for your
+                                        query related to cleaning</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /second column in a first row end -->
+                </div>
+            </div>
+            <div class="h1__agency__image mt--30">
+                <img src="images/others/cleaning.png" alt="">
+            </div>
+        </section>
+        <!-- End agency Area -->
+
+
+        <!-- start Service Area -->
+        <section class="htc__service__area service--2 ">
+            <div class="container">
+                <div class="row">
+                    <div class="service__section__wrap clearfix">
+                        <!-- Start Single Service -->
+                        <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12 ">
+                            <div class="service__thumb hidden-sm hidden-xs">
+                                <img src="images/offers/Side_bar.jpg" width="100%" height="400px" alt="about image">
+                            </div>
+                        </div>
+                        <!-- End Single Service -->
+                        <div class="col-md-12 col-lg-8 col-sm-12 col-xs-12 h1__service ">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="agency_head mtb--10">
+                                        <h3 class="mtb--10 text-small">FROM A TRUSTED CLEANING COMPANY</h3>
+                                        <h2 style="font-weight: bold;"><span class="text--theme">HIGH QUALITY</span> &
+                                            BEST
+                                            CLEANING <span class="text--theme">SERVICES</span></h2>
+                                    </div>
+                                    <div class="foo ">
+                                        <p>GREEN professionals provide such a good service that you need not to lift a
+                                            figure, just you need to book us online. It only takes minutes! We work as
+                                            per the given time guidelines and never let you a chance to complain about
+                                            our task as we have a goal to give our customers with the best product and
+                                            services</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-uppercase mt--30 foo">
+                                <div class="col-md-5 col-lg-5 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!-- -- -->
+                                        <div class="service_tag">
+                                            <a href="./body-corporate-strata.html">
+                                                <h2 class="text-medium"> <span><i
+                                                            class="fa fa-arrows text--theme "></i></span> Body corporate
+                                                    and strata cleaning </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!-- -- -->
+                                        <div class="service_tag">
+                                            <a href="./office-cleaning.html">
+                                                <h2 class="text-medium"> <span><i class="fa fa-arrows text--theme ">
+                                                        </i></span> Office Cleaning </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!-- -- -->
+                                        <div class="service_tag">
+                                            <a href="./industrial-cleaning.html">
+                                                <h2 class="text-medium"> <span><i
+                                                            class="fa fa-arrows text--theme "></i></span> Industrial
+                                                    cleaning </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <div class="col-md-5 col-lg-5 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!-- -- -->
+                                        <div class="service_tag">
+                                            <a href="./childcare-retirement-cleaning.html">
+                                                <h2 class="text-medium"> <span><i
+                                                            class="fa fa-arrows text--theme "></i></span> Child care &
+                                                    retirement cleaning </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!-- -- -->
+                                        <div class="service_tag">
+                                            <a href="retail-cleaning.html">
+                                                <h2 class="text-medium"> <span><i
+                                                           class="fa fa-arrows text--theme "></i></span> Retail
+                                                    cleaning </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!--  -->
+                                        <div class="service_tag">
+                                            <a href="./medical-cleaning.html">
+                                                <h2 class="text-medium"> <span><i
+                                                           class="fa fa-arrows text--theme "></i></span> Medical
+                                                    cleaning </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-5 col-lg-5 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!--  -->
+                                        <div class="service_tag">
+                                            <a href="./shoppingcenter-cleaning.html">
+                                                <h2 class="text-medium"> <span><i
+                                                            class="fa fa-arrows text--theme "></i></span> Shopping
+                                                    center cleaning </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!--  -->
+                                        <div class="service_tag">
+                                            <a href="./waste-management.html">
+                                                <h2 class="text-medium"> <span><i
+                                                            class="fa fa-arrows text--theme "></i></span> Waste
+                                                    management </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!--  -->
+                                        <div class="service_tag">
+                                            <a href="./educational-clceaning.html">
+                                                <h2 class="text-medium"> <span><i
+                                                            class="fa fa-arrows text--theme "></i></span> Educational
+                                                    cleaning </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-5 col-lg-5 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!--  -->
+                                        <div class="service_tag">
+                                            <a href="./sports-leisure-cleaning.html">
+                                                <h2 class="text-medium"> <span><i
+                                                            class="fa fa-arrows text--theme "></i></span> Sports and
+                                                    leisure cleaning</h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!--  -->
+                                        <div class="service_tag">
+                                            <a href="./hospitality-cleaning.html">
+                                                <h2 class="text-medium"> <span><i
+                                                            class="fa fa-arrows text--theme "></i></span> Hospitality
+                                                    Cleaning </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                                <!-- Start Single Service -->
+                                <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 ">
+                                    <div class="service">
+                                        <!--  -->
+                                        <div class="service_tag">
+                                            <a href="./building-management.html">
+                                                <h2 class="text-medium"> <span><i class="fa fa-arrows text--theme "></i></span> Building
+                                                    management service </h2>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Service -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Area -->
+
+
+        <!-- Start What We Offer Area -->
+        <section class="htc__latest__offer__area ptb--80 bg__gray text__pos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section__title text-center">
+                            <h3 class="mtb--10 text-small">BETTER CLEANING SERVICES</h3>
+                            <h2 style="font-weight: bold;">WHAT <span class="text--theme">WE
+                                    OFFER </span></h2>
+                            <p style="width: 85%;">We are complete solution for the cleaning service around Australia
+                                beside that Not only cleaning, GREEN also allow services like Ground Maintenance, Pest
+                                Control, Graffiti Removal, Polishing and many others services essential for you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="htc__latest__offer__wrap h1__offer clearfix mt--30 text-center">
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <!-- col-offer-1 -->
+                                <div class="col-md-4 col-sm-4 col-xs-6 foo">
+                                    <div class="offer__itm foo">
+                                        <div class="offer__thumb">
+                                            <a title="Learn More" href="./office-cleaning.html">
+                                                <img src="images/offers/cleaning.jpg" alt="offer images">
+                                            </a>
+                                            <div class="offer__hover__info">
+                                                <div class="offer__action ">
+                                                    <h2><a title="Learn More" href="./office-cleaning.html">OFFICE
+                                                            CLEANING</a>
+                                                    </h2>
+                                                    <p>Peace working environment with clean surrounding help to boost up
+                                                        the energy of employees and put great impact on clients for...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col-offer-1 -->
+                                <div class="col-md-4 col-sm-4 col-xs-6 bar">
+                                    <div class="offer__itm foo">
+                                        <div class="offer__thumb">
+                                            <a title="Learn More" href="./industrial-cleaning.html">
+                                                <img src="images/offers/Industry_cleaning.jpg" alt="offer images">
+                                            </a>
+                                            <div class="offer__hover__info">
+                                                <div class="offer__action">
+                                                    <h2><a title="Learn More"
+                                                            href="./industrial-cleaning.html">INDUSTRIAL
+                                                            CLREANING</a></h2>
+                                                    <p>When it comes about industrial cleaning, it is about to clean the
+                                                        machinery objects and human resource leaning them to continue...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col-offer-1 -->
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="offer__itm foo">
+                                        <div class="offer__thumb">
+                                            <a title="Learn More" href="./body-corporate-strata.html">
+                                                <img src="images/offers/body_corporate.jpg" alt="offer images">
+                                            </a>
+                                            <div class="offer__hover__info">
+                                                <div class="offer__action">
+                                                    <h2><a title="Learn More" href="./body-corporate-strata.html">BODY
+                                                            CORPORATE AND STRATA CLEANING</a></h2>
+                                                    <p>There are two things that truly matter when searching for body
+                                                        corporate cleaning...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col-offer-1 -->
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="offer__itm foo">
+                                        <div class="offer__thumb">
+                                            <a title="Learn More" href="./childcare-retirement-cleaning.html">
+                                                <img src="images/offers/Child_care.jpg"
+                                                    alt="offer images">
+                                            </a>
+                                            <div class="offer__hover__info">
+                                                <div class="offer__action">
+                                                    <h2><a title="Learn More"
+                                                            href="./childcare-retirement-cleaning.html">CHILD CARE &
+                                                            RETIREMENT CLEANING</a>
+                                                    </h2>
+                                                    <p>Child care and retirement cleaning is sensible and far way from
+                                                        the daily commercial cleaning...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- col-offer-1 -->
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="offer__itm foo">
+                                        <div class="offer__thumb">
+                                            <a title="Learn More" href="./retail-cleaning.html">
+                                                <img src="images/offers/Retail_cleaning.jpg" alt="offer images">
+                                            </a>
+                                            <div class="offer__hover__info">
+                                                <div class="offer__action">
+                                                    <h2><a title="Learn More" href="./retail-cleaning.html">RETAIL
+                                                            CLEANING</a></h2>
+                                                    <p>Retail cleaning services, what u sell like mobiles, laptops,
+                                                        clothes or other products your offices, stores or stalls should
+                                                        be clean which...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col-offer-1 -->
+                                <div class="col-md-4 col-sm-4 col-xs-6">
+                                    <div class="offer__itm foo">
+                                        <div class="offer__thumb">
+                                            <a title="Learn More" href="./medical-cleaning.html">
+                                                <img src="images/offers/Medical_cleaning.jpg" alt="offer images">
+                                            </a>
+                                            <div class="offer__hover__info">
+                                                <div class="offer__action">
+                                                    <h2><a title="Learn More" href="./medical-cleaning.html">MEDICAL
+                                                            CLEANING</a>
+                                                    </h2>
+                                                    <p>Guaranteeing reliable high cleaning guidelines that forestall the
+                                                        spread of contamination has never been a higher priority than
+                                                        now. Our degree...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /Offer Content Row End  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End What We Offer Area -->
+
+        <!-- Start Counter Up Area -->
+        <section class="htc__counterup__area count--2 h1__countdown ptb--30 mtb--20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 foo">
+                        <div class="counterup__left__thumb">
+                            <img src="images/about/5.png" alt="images">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 m--0">
+                        <div class="htc__callto__action bar">
+                            <h2 class="text-uppercase text-medium"># BEST <span class="text--theme">Commercial</span>
+                                cleaning</h2>
+                            <p>We are working since 2016 and satisfy all of our customer. We arenot saying to hire us or
+                                let us do your cleaning work but once you give us chance we never let you down by our
+                                services. You can find our milestone below to know how trust worthy and how we have
+                                satisfy them</p>
+
+                        </div>
+                        <div class="htc__counterup__wrap "
+                            style="background: rgba(0, 0, 0, 0) url(images/bg/10.png) no-repeat scroll center center / cover ;">
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">250</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>Project Finished</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">220</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>Satisfied Customers</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">361</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>Brenchs Network</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">156</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>Tips Adviced</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Fact -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Counter Up Area -->
+
+        <!-- Start Testimonial Area -->
+        <section class="htc__testimonial__area ptb--100" data--gray__overlay="9.5"
+            style="background: rgba(0, 0, 0, 0) url(images/bg/1.jpg) no-repeat fixed center center / cover ;">
+            <div id="runLoader"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12">
+                        <div class="htc__testimonial__wrap ">
+                            <div class="section__title text-left">
+                                <h2 class="title__line">CLIENTS <span class="text--theme">SAYS</span></h2>
+                                <p>A complete solution for the cleaning service in Australia. Green Comercial Cleaning
+                                </p>
+                            </div>
+                            <div id="reviewsdiv" class="testimonial__activation clearfix ">
+                                <!-- Start Single Testimonial -->
+
+                                <!-- <div id="reviewsdiv"> -->
+                                    <!-- <p id="reviews">On the other hand </p>
+                                        <h2 id="reviewer"><a href="#">Ken Williams</a></h2>
+                                        <h4 id="company">CEO, Alves</h4> -->
+
+                                    <!-- </div> -->
+                                <!-- </div> -->
+
+                                <!-- End Single Testimonial -->
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mtb--80 review_button">
+                                <!-- Button trigger modal -->
+                                <button type="button" id="" class="btn htc__btn text--light" style="z-index: -90;"
+                                    data-toggle="modal" data-target="#exampleModalReview">
+                                    Send Review
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModalReview" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div id="runLoader1"></div>
+                                    <div class="modal-dialog" role="document">
+
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h3 class="modal-title" id="exampleModalLabel"><b>Send Review</b></h3>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close" style="right: 18px; top: 18px; ">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body" style="z-index: 999;">
+
+                                                <form id="sendReviewForm">
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label for="modalFullName">Name</label>
+                                                            <input type="text" class="form-control form-control-md"
+                                                                placeholder="Full Name" name="name" id="name" value="">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="modalEmail">Email</label>
+                                                            <input type="email" class="form-control form-control-md"
+                                                                placeholder="Email Address" name="email" id="email">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="modalAssociation">Associated
+                                                                Company/position</label>
+                                                            <input type="text" class="form-control form-control-md"
+                                                                placeholder="Company/Position" value="" name="company"
+                                                                id="company">
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <label for="modalFile">Upload Photo</label>
+                                                            <input type="file" class="form-control form-control-md"
+                                                                placeholder="" accept="image/png, image/jpeg"
+                                                                name="photo" id="photo">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="modalMessage">Review Message</label>
+                                                            <textarea class="" value="Reviews goes here!" name="message"
+                                                                id="message" cols="30" rows="10">
+                                                            </textarea>
+
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <button id="btnSendReview" type="submit"
+                                                                style="bottom: -240px;right: 6%;"
+                                                                class="btn  htc__btn ">Save
+                                                                changes</button>
+                                                        </div>
+                                                        <div class="col-md-6 ">
+                                                            <button type="button" class="btn btn-primary btn-lg"
+                                                                data-dismiss="modal"
+                                                                style="bottom: -240px;right: 60%;">Close</button>
+                                                        </div>
+                                                        <div id="sendreviewcheck" class="col-md-6">
+                                                            <label class="text-danger" for="info">You must Register or
+                                                                Login to submit your review.</label>
+                                                        </div>
+
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6  col-lg-offset-1 col-sm-12 col-xs-12 smt-40">
+
+                        <div class="reguest__quote ">
+                            <div class="section__title text-left">
+                                <h2 class="title__line"><span class="text-medium">REQUEST </span><span
+                                        class="text--theme">
+                                        A QUOTE</span><span class="text-small">
+                                        &nbsp;&nbsp;or&nbsp;&nbsp;
+                                    </span><span class="text-medium">have</span><span class="text--theme">&nbsp;any
+                                        Complain ?</span></h2>
+                                <p>Get a quick response from us just filled up the form and request for free quote, we
+                                    will serve you at your door</p>
+                            </div>
+                            <div>
+                                <p>Please select one of your query. Thank you.</p>
+                            </div>
+                            <form id="qorc_form">
+
+                                <div class="single_cl_form">
+                                    <label action="haQuote">Request a Quote</label>
+                                    <input type="radio" name="QR" onclick="checkQuote()" id="hasQuote">
+                                    <label action="hasComplain">Send a Complain</label>
+                                    <input type="radio" name="QR" onclick="checkComplain()" id="hasComplain">
+                                </div>
+
+                                <div class="clint__comment__form">
+                                    <div class="single__cl__form">
+                                        <input type="text" id="qorcname" name="name" placeholder="Name" required>
+                                        <input type="email" id="qorcemail" name="email" placeholder="Email"
+                                            required>
+                                    </div>
+                                    <div class="single__cl__form">
+                                        <input type="tel" id="qorcphone" name="phone" placeholder="Phone" required>
+                                        <input id="checkforquote" type="text" placeholder="Subject">
+                                        <input id="complain_image" name="complain_image" type="file" placeholder=""
+                                            accept="image/png, image/jpeg" multiple>
+                                    </div>
+
+                                    <div class="single__cl__message">
+                                        <textarea id="qorcmessage" name="message" placeholder="Message"
+                                            required></textarea>
+                                    </div>
+
+                                    <div id="btnQorCcheck" class="clint__submit__btn">
+                                        <button class="submit htc__btn" id="btnSubmitQorC" type="button">
+                                            SUBMIT QUOTE
+                                        </button>
+                                        <button class="submit htc__btn" id="btnSubmitComplain" type="submit">
+                                            SUBMIT COMPLAIN
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="alertQuote" class="alert alert-success alert-dismissible none mt--20" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <span id="qorcInfo"></span>
+                            </div>
+                            <div class="text--theme single__cl__message" id="checkforinfo">
+                                <h3 class="text-danger"><b>You MUST sign in as an existing CLIENT to be able to send a
+                                        complain!! Thank you.</b><br></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Testimonial Area -->
+
+        <!-- Quote Modal -->
+    <div id="error_Quote" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title">Error Quote</h2>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger" role="alert">Please fill up the form</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <!-- Start Client Show Area -->
+        <!-- <div class="htc__brand__area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-6 col-xs-12">
+                        <ul class="brand__list">
+                            <li><a href="#"><img src="images/brand/1.jpg" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/2.jpg" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/3.jpg" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/4.jpg" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/3.jpg" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/2.jpg" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/3.jpg" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/4.jpg" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/5.jpg" alt="brand images"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- End Client Show Area -->
+
+        <!-- Start Newsletter Area -->
+        <section class="htc__newsletter__area ptb--70 bg__gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="newsletter__wrap">
+                            <h2 class="title__line">SUBSCRIBE <span class="text--theme">NEWSLETTER</span></h2>
+                            <h4>Subscribe our newsletter and get latest update</h4>
+                            <div class="newsletter__form">
+                                <div class="input__box">
+                                    <div id="mc_embed_signup">
+                                        <form action="#" method="post" id="mc-embedded-subscribe-form"
+                                            name="mc-embedded-subscribe-form" class="validate" target="_blank" validate>
+                                            <div id="mc_embed_signup_scroll" class="htc__news__inner">
+                                                <div class="news__input">
+                                                    <input type="email" value="" name="EMAIL" class="email"
+                                                        id="mce-EMAIL" placeholder="Email Address" required>
+                                                </div>
+                                                <div class="clearfix subscribe__btn"><input type="submit"
+                                                        value="SUBSCRIBE NOW" name="subscribe" id=""
+                                                        class="bst__btn btn--white__color">
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="newsletter__thumb">
+                <div class="newsletter__thumb__inner">
+                    <img src="images/others/cleaning.png" alt="newsletter img">
+                </div>
+            </div>
+        </section>
+        <!-- End Newsletter Area -->
+
+        <!-- Start Contact Address -->
+        <div class="htc__contact__address add-res bg__cat--1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="htc__contact__wrap clearfix">
+                            <!-- Start Single Address -->
+                            <div class="ht__address__inner">
+                                <div class="ht__address__icon map-pin">
+                                    <i class="zmdi zmdi-pin"></i>
+                                </div>
+                                <div class="ht__address__details">
+                                    <p>Suite 1, Level 10, <br>230 Collins St, vic 3000</p>
+                                </div>
+                            </div>
+                            <!-- End Single Address -->
+                            <!-- Start Single Address -->
+                            <div class="ht__address__inner">
+                                <div class="ht__address__icon glob">
+                                    <i class="fa fa-globe" aria-hidden="true"></i>
+                                </div>
+                                <div class="ht__address__details">
+                                    <p>info@greencomercialclaening.com.au</p>
+                                    <p>Rajan@greencommercialcleaning.com.au</p>
+                                </div>
+                            </div>
+                            <!-- End Single Address -->
+                            <!-- Start Single Address -->
+                            <div class="ht__address__inner">
+                                <div class="ht__address__icon">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="ht__address__details">
+                                    <p>0433639672</p>
+                                    <p>0422780703</p>
+                                </div>
+                            </div>
+                            <!-- End Single Address -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- End Contact Address -->
+
+        <!-- Start Footer Area -->
+        <footer class="htc__footer__area">
+            <div class="footer__top ptb--100" data--1f2d30__overlay="9.5"
+                style="background: rgba(0, 0, 0, 0) url(images/bg/bg-1.jpg) no-repeat fixed center center / cover ;">
+                <div class="container">
+                    <div class="row">
+                        <div class="htc__footer__wrap clearfix">
+                            <!-- Start Single Footer -->
+                            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                                <div class="footer foo">
+                                    <div class="footer__widget">
+                                        <h2 class="text--theme">Green Commercial Cleaning</h2>
+                                    </div>
+                                    <div class="ft__details mt--20">
+                                        <p>As we all loves to live in clean and healthy environment but due to our busy
+                                            schedules we might not have much time on these things. Ignoring it can may
+                                            hamper our health and also our surroundings. If you don't have time and
+                                            interest in cleaning your houses and other commercial area</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Footer -->
+                            <!-- Start Single Footer -->
+                            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 xmt-40">
+                                <div class="footer quick__link foo">
+                                    <div class="footer__widget">
+                                        <h2 class="text--theme">Quick Links</h2>
+                                    </div>
+                                    <div class="footer__link mt--20">
+                                        <ul class="ft__menu">
+                                            <li><a href="index.html">HOME</a></li>
+                                            <li><a href="about.html">ABOUT US</a></li>
+                                            <li><a href="service.html">OUR SERVICES</a></li>
+                                            <li><a href="index.html">BLOGS</a></li>
+                                            <li><a href="career.html">CAREERS</a> </li>
+                                            <li><a href="contact.html">CONTACT</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Footer -->
+                            <!-- Start Single Footer -->
+                            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6 smt-40 xmt-40">
+                                <div class="footer foo">
+                                    <div class="footer__widget">
+                                        <h2 class="text--theme">Main Services</h2>
+                                    </div>
+                                    <ul class="footer__instagram mt--20">
+                                        <li><a href="./single-offer-pest-control.html">PEST CONTROL</a></li>
+                                        <li><a href="./single-offer-graffiti-removal.html">GRAFFITI REMOVAL</a></li>
+                                        <li><a href="./single-offer-transport-cleaning.html">TRANSPORT CLEANING</a></li>
+                                        <li><a href="./single-offer-home-cleaning.html">HOME CLEANING</a></li>
+                                        <li><a href="./single-offer-polishes-finishing.html">POLISHES & FINISHING</a>
+                                        </li>
+                                        <li><a href="./single-offer-hardfloor-maintenance.html">HARD FLOOR
+                                                MAINTENANCE</a></li>
+                                        <li><a href="./single-offer-commercial-cleaning.html">COMMERCIAL CLEANING</a>
+                                        </li>
+                                        <li><a href="./single-offer-grounds-maintenance.html">GROUNDS MAINTENANCE</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- End Single Footer -->
+                            <!-- Start Single Footer -->
+                            <div class="col-md-2 col-lg-2 col-sm-6 col-xs-12 smt-40 xmt-40">
+                                <div class="footer foo">
+                                    <div class="footer__widget">
+                                        <h2 class="text--theme">Latest Post</h2>
+                                        <div class="footer__link mt--20">
+                                            <ul class="ft__menu text-large">
+                                                <li><a href="career.html">On the other hand,</a></li>
+                                                <li><a href="career.html">On the other hand,</a></li>
+                                                <li><a href="career.html">On the other hand,</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Footer -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright bg__theme">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="copyright__inner">
+                                <p>Copyright <a href="http://softtechmultimedia.com" target="_blank">Softtech
+                                        Multimedia</a>
+                                    All Rights Reserved 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
     </div>
+    <!-- Body main wrapper end -->
 
-    <footer>
-        <p class="footer-contents">Designed and developed with <a href="https://aws.amazon.com/careers/devtools-jobs/">♥</a> in Seattle.</p>
-    </footer>
+    <!-- Placed js at the end of the document so the pages load faster -->
 
-    <script src="js/set-background.js"></script>
+    <!-- jquery latest version -->
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="js/plugins.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="js/waypoints.min.js"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="./js/handleAfterAuth.js"></script>
+    <script src="./js/handleReviews.js"></script>
+    <script src="./js/handleSendQuote.js"></script>
+    <script src="./js/handleComplains.js"></script>
+
+    <script src="js/slick.min.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+
+    <script>
+        sendreviewcheck = document.getElementById('sendreviewcheck');
+        isCheckforinfoVisiable = document.getElementById('checkforinfo');
+        isVisibleInQuote = document.getElementById('checkforquote');
+        isVisibleInComplain = document.getElementById('complain_image');
+        showOuoteOrComplainBtn = document.getElementById('btnQorCcheck');
+        sendYorQoteBtn = document.getElementById('btnSubmitQorC');
+        sendYourComplainBtn = document.getElementById('btnSubmitComplain');
+        isVisibleInComplain.style.display = 'none';
+        isCheckforinfoVisiable.style.display = 'none';
+        sendYorQoteBtn.style.display = 'none';
+        sendYourComplainBtn.style.display = 'none';
+
+
+        function checkQuote() {
+            isVisibleInComplain.style.display = 'none';
+            isCheckforinfoVisiable.style.display = 'none';
+            isVisibleInQuote.style.display = 'block';
+            sendYourComplainBtn.style.display = 'none';
+            sendYorQoteBtn.style.display = 'block';
+
+
+        }
+
+        function checkComplain() {
+
+            if (window.localStorage.getItem('loggeduser') === null || undefined) {
+
+                isCheckforinfoVisiable.style.display = 'block';
+                isVisibleInComplain.style.display = 'block';
+                isVisibleInQuote.style.display = 'none';
+                sendYorQoteBtn.style.display = 'none';
+
+
+            } else {
+                isCheckforinfoVisiable.style.display = 'none';
+                isVisibleInQuote.style.display = 'none';
+                isVisibleInComplain.style.display = 'block';
+                sendYorQoteBtn.style.display = 'none';
+                sendYourComplainBtn.style.display = 'block';
+            }
+        }
+    </script>
+
 </body>
+
+
 
 </html>

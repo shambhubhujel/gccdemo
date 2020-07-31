@@ -1,0 +1,206 @@
+
+/*
+
+    font-family: 'Raleway', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+
+*/
+.slider-area > img {
+  height: 100vh;
+  width: 100%;
+}
+
+.slider__bg--1 {
+  background: #675e5d url("../../images/slider/bg/1.jpg") no-repeat scroll 0 0 / cover ;
+}
+
+.slider__bg--2 {
+  background: #675e5d url("../../images/slider/bg/2.jpg") no-repeat scroll 0 0 / cover ;
+}
+
+/*-----------------------------------------
+  Background variation Content
+-------------------------------------------*/
+
+
+.slider__fixed--height {
+  height: 800px;
+}
+
+.slide__align--center {
+  align-items: center;
+  display: flex;
+}
+.slider__inner{
+  position: relative;
+  z-index: 222;
+  text-align: center;
+  margin-top: -100px;
+}
+
+.slider__inner h4 {
+    color: #fdfdfd;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.slider__inner h1 {
+    color: #fdfdfd;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 55px;
+    margin-top: 20px;
+}
+.slider__inner p {
+    color: #fffefe;
+    font-size: 17px;
+    line-height: 28px;
+    margin: 23px auto auto;
+    width: 57%;
+}
+.slider__btn {
+    margin-top: 40px;
+}
+.htc__btn {
+    background: #00830c none repeat scroll 0 0;
+    color: #fffefe;
+    display: inline-block;
+    font-family: Raleway;
+    font-size: 17px;
+    font-weight: 500;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 25px;
+    transition: 0.5s;
+    border: 1px solid #00830c;
+    border-radius: 5px;
+}
+.htc__btn:hover{
+    border: 1px solid #292929;
+    background: rgb(43, 43, 43);
+    color:#fffefe;
+}
+
+
+.htc__slider__fornt__img {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+
+
+/*----------------------
+  Animation
+-------------------------*/
+.slider__activation__wrap {
+    position: relative;
+}
+.slider__activation__wrap .owl-nav div {
+    height: 54px;
+    left: 0;
+    line-height: 59px;
+    position: absolute;
+    top: 50%;
+    width: 35px;
+}
+
+.slider__activation__wrap .owl-nav div.owl-next {
+    left: auto;
+    right: 0;
+}
+.slider__activation__wrap .owl-nav div i {
+    color: #fffefe;
+    font-size: 30px;
+}
+.slider__activation__wrap.owl-theme .owl-nav [class*="owl-"] {
+    background: #675e5d none repeat scroll 0 0;
+    transition: 0.5s;
+}
+
+.slider__activation__wrap.owl-theme .owl-nav [class*="owl-"]:hover {
+    background: rgba(184, 144, 37, 0.6) none repeat scroll 0 0;
+}
+
+
+
+.slider__activation__wrap.owl-theme .owl-nav {
+  margin-top: 0;
+}
+
+/* --------------------
+waving slider design
+----------------------*/
+@keyframes move_wave {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1)
+  }
+  50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.55)
+  }
+  100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1)
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  background-image: linear-gradient(to bottom, transparent 70%, #00830c 95%);
+}
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.bgBottom {
+  z-index: 5;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+animation: move-wave 3s;
+ -webkit-animation: move-wave 3s;
+ -webkit-animation-delay: 1s;
+ animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+

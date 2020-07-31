@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo/green_commercial_logo.png" type="image/png" />
+
+    <title>Green Commercial Cleaning </title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="../../css/LoaderOnlystyle.css">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../build/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/custom.css">
+
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar" style="border: 0;">
+                        <a href="index.html" class="site_title"><u>Green Commercial Cleaning</u>
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div  class="menu_section">
+                          <ul id="showhideMenus" class="nav side-menu">
+
+                          </ul>
+
+                        </div>
+
+                      </div>
+                    <!-- /sidebar menu -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                    <nav class="nav navbar-nav">
+                        <ul class=" navbar-right">
+                            <li class="nav-item dropdown open" style="padding-left: 15px;">
+                                <a href="javascript:;" id="adminUser" class="user-profile dropdown-toggle" aria-haspopup="true"
+                                    id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="" alt="">User Name
+                                </a>
+                                <div class="dropdown-menu dropdown-usermenu pull-right"
+                                    aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="profile.html"> Profile</a>
+                                    <a class="dropdown-item" id="logout"><i class="fa fa-sign-out pull-right"></i>
+                                        Log Out</a>
+                                </div>
+                            </li>
+                            <li class="nav-item open" style="padding-top: 6px;">
+                                <a href="../../index.html">Goto Site</a>
+                            </li>
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+
+
+                <div class="row">
+                    <div id="runLoader"></div>
+
+                    <div class="col-md-12 col-sm-12 ">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Supervisor Details </h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card-box table-responsive">
+                                            <p class="text-muted font-13 m-b-30">
+                                                Something about supervisor's detail. Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Sunt temporibus, delectus dolorum nobis
+                                                blanditiis porro conuga consectetur, natus numquam distinctio tempore
+                                                dolorum
+                                                dicta veniam ea reiciendis!
+                                            </p>
+                                            <table id="supervisorTable" class="table table-striped table-bordered"
+                                                style="width:100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Position</th>
+                                                        <th>Office</th>
+                                                        <th>Email Address</th>
+                                                        <th>Phone Number</th>
+                                                        <th>Age</th>
+                                                        <th>Start Date</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody id="supervisorTBody">
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    Green Commercial Cleaning by <a href="https:softtechmultimedia.com">SoftTech Multimedia Pvt. Ltd.
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Datatables -->
+    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <!-- Custom User Scripts -->
+    <script src="./js/customjs/handleBeforeAuth.js"></script>
+    <script src="./js/customjs/handleAfterAuth.js"></script>
+    <script src="../build/js/custom.min.js"></script>
+    <script>
+        const loggedAdmin = document.getElementById('adminUser');
+        let output = `
+                    <img src="${window.localStorage.getItem('avatar')}" alt="">${window.localStorage.getItem('loggedadmin')}
+                </a>`;
+
+        loggedAdmin.innerHTML = output;
+    </script>
+
+    <!-- Cleaner Details -->
+    <script>
+        const url = 'http://localhost:5000/api/v1';
+        const token = window.localStorage.getItem('admintoken');
+        const tBody = document.getElementById('supervisorTBody');
+
+        const loading = document.getElementById('runLoader');
+
+        function getAllCleaner() {
+            loading.style.display = 'block';
+            fetch(`${url}/admin?role=supervisor`, {
+                headers: { Authorization: 'Bearer ' + token },
+                method: 'GET',
+            })
+                .then(response => response.json())
+                .then(allSupervisor => {
+                    const supervisor = allSupervisor.data;
+                    //console.log('All supervisor: ', supervisor);
+
+                    const output = supervisor.map(supervisor => {
+                        let startDate = Date.parse(supervisor.startDate).toString('dd-MM-yyyy');
+                        return `
+                                <tr>
+                                    <td>${supervisor.name}</td>
+                                    <td>${supervisor.position}</td>
+                                    <td>${supervisor.office}</td>
+                                    <td>${supervisor.email}</td>
+                                    <td>${supervisor.phone}</td>
+                                    <td>${supervisor.age}</td>
+                                    <td>${startDate}</td>
+                                </tr>
+                                `
+                    });
+                    tBody.innerHTML = output.join(' ');
+                    loading.style.display = 'none';
+                })
+                .then(() => {
+                    var table = $('#supervisorTable').DataTable();
+                    new $.fn.dataTable.Buttons( table, {
+                        buttons: [
+                            'print', 'excel', 'copy', 'csv', 'pdf',
+                        ]
+                    } );
+                    table.buttons().container().appendTo( '#supervisorTable_wrapper .col-sm-6:eq(0)' )
+                })
+        }
+        getAllCleaner();
+    </script>
+
+
+</body>
+
+</html>
