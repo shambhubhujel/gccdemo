@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //var Loader = document.getElementById('loading');
   //var SLoader = document.getElementById('signuploading');
-  const url = 'http://localhost:5000/api/v1/';
+  const url = 'http://46.101.210.191:5000/api/v1/';
   function adminAuth() {
     if (localStorage.getItem('loggedadmin') === null || undefined) {
       try {

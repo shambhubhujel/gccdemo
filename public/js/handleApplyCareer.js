@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
-const url = 'http://localhost:5000/api/v1';
+const url = 'http://46.101.210.191:5000/api/v1';
 const workBody = document.getElementById('workBody');
 let title = null;
 
