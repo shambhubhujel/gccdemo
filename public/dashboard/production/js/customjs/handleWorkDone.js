@@ -6,7 +6,6 @@ const ID = window.localStorage.getItem('adminid');
 const isAdmin = window.localStorage.getItem('isAdmin');
 const currentDate = moment().format('DD-MM-YYYY');
 const selectOption = document.getElementById('workaddress');
-
 const form = document.getElementById('addWorkDone');
 let workDate = null;
 const alertInfo = document.getElementById('alertInfo');
@@ -15,39 +14,30 @@ const alertError = document.getElementById('alertError');
 const alertErrorMsg = document.getElementById('alertErrorMsg');
 const loading = document.getElementById('runLoader');
 const TIMEOUT = 2000;
-
 const modal = $('#finishShiftModal');
 const modalForm = document.querySelector('#finishShift');
 let workID = null;
-
 let workLocation = null;
 let currentSiteID = null;
-
 !ID && showAlertError('ID not found from local storage', TIMEOUT);
-
 // Hide form if admin is logged in
 isAdmin === 'admin' ? form.remove() : null;
-
 // get current location
 let latitude;
 let longitude;
-
 const options = {
   enableHighAccuracy: true,
   timeout: 5000,
   maximumAge: 0,
 };
-
 function locationSuccess(pos) {
   const crds = pos.coords;
   latitude = crds.latitude;
   longitude = crds.longitude;
-
   console.log('Your current position is:');
   console.log(`Latitude : ${latitude}`);
   console.log(`Longitude: ${longitude}`);
 }
-
 function locationError(err) {
   console.warn(`ERROR(${err.code}): ${err.message}`);
   showAlertError(
@@ -55,13 +45,11 @@ function locationError(err) {
     TIMEOUT
   );
 }
-
 navigator.geolocation.getCurrentPosition(
   locationSuccess,
   locationError,
   options
 );
-
 function loadAllSite() {
   fetch(`${url}/site/cleaner/${ID}`, {
     headers: { Authorization: 'Bearer ' + token },
@@ -119,7 +107,6 @@ function loadAllSite() {
     currentSiteID = this.options[this.selectedIndex].id;
   });
 }
-
 function getCleanerWorks() {
   loading.style.display = 'block';
   fetch(`${url}/work/${ID}`, {
@@ -130,12 +117,10 @@ function getCleanerWorks() {
     .then((allWorkDone) => {
       const workDone = allWorkDone.data;
       //console.log('allWorkDone: ', workDone);
-
       // Delete table if #workDoneTable exists
       if ($.fn.DataTable.isDataTable('#workDoneTable')) {
         $('#workDoneTable').DataTable().clear().destroy();
       }
-
       const output = workDone.map((work) => {
         const date = Date.parse(work.workDate).toString('dd-MM-yyyy');
         const start = moment(work.createdAt).format('hh:mm:A');
@@ -157,14 +142,14 @@ function getCleanerWorks() {
                     <td>${work.address}</td>
                     <td>
                     ${work.photo
-                      .map((img) => {
-                        return `
+            .map((img) => {
+              return `
                             <a href="${img}"target="_blank">
                             <img src="${img}" alt="client image" width="100px" >
                             </a>
                         `;
-                      })
-                      .join(' ')}
+            })
+            .join(' ')}
                     </td>
                     <td>
                       ${date}
@@ -172,8 +157,8 @@ function getCleanerWorks() {
                     <td>${start}</td>
                     <td>${end}</td>
                     <td class="text-center" style="vertical-align:middle">${
-                      end ? btnDisable : btnEnable
-                    }</td>
+          end ? btnDisable : btnEnable
+          }</td>
                 </tr>
                 `;
       });
@@ -181,9 +166,7 @@ function getCleanerWorks() {
       tBody.innerHTML = output.join(' ');
       $('#workDoneTable').DataTable();
       loading.style.display = 'none';
-
       const endShift = document.querySelectorAll('.endShift');
-
       endShift.forEach((btn) => {
         btn.addEventListener('click', (e) => {
           workID = e.currentTarget.dataset.id;
@@ -192,7 +175,6 @@ function getCleanerWorks() {
       });
     });
 }
-
 //Finish Work
 modalForm.onsubmit = async (e) => {
   e.preventDefault();
@@ -211,7 +193,6 @@ modalForm.onsubmit = async (e) => {
     modalForm.reset();
     let result = await response.json();
     loading.style.display = 'none';
-
     if (!result.success) {
       modal.modal('hide');
       showAlertError(result.error, TIMEOUT);
@@ -226,13 +207,11 @@ modalForm.onsubmit = async (e) => {
     showAlertError(error, TIMEOUT);
   }
 };
-
 // Add Work
 form.onsubmit = (e) => {
   e.preventDefault();
   loading.style.display = 'block';
   const formData = new FormData(form);
-
   // Get User's current location
   fetch(`${url}/work/${latitude}/${longitude}`, {
     headers: {
@@ -247,10 +226,8 @@ form.onsubmit = (e) => {
         showAlertError(location.message, TIMEOUT);
         return;
       }
-
       const data = location.data[0];
       const fullAddress = data.formattedAddress;
-
       // Check user's location to selected work site address
       if (!fullAddress.includes(workLocation)) {
         showAlertError(
@@ -260,12 +237,10 @@ form.onsubmit = (e) => {
         loading.style.display = 'none';
         return;
       }
-
       // Start user's shift
       formData.append('address', fullAddress);
       formData.append('workDate', moment().toDate());
       formData.append('id', currentSiteID);
-
       // Post user work
       fetch(`${url}/work/`, {
         headers: {
@@ -278,7 +253,6 @@ form.onsubmit = (e) => {
         .then((result) => {
           console.log('Result: ', result);
           loading.style.display = 'none';
-
           if (!result.success) {
             showAlertError(result.error, TIMEOUT);
             return;
@@ -293,7 +267,6 @@ form.onsubmit = (e) => {
       loading.style.display = 'none';
       showAlertError(error, TIMEOUT);
     });
-
   // Check if location matched
   // try {
   //   loading.style.display = 'block';
@@ -307,12 +280,10 @@ form.onsubmit = (e) => {
   //   form.reset();
   //   let result = await response.json();
   //   loading.style.display = 'none';
-
   //   if (!result.success) {
   //     showAlertError(result.error, TIMEOUT);
   //     return;
   //   }
-
   //   showAlertSuccess('Successfully added Work', TIMEOUT);
   //   getCleanerWorks();
   // } catch (error) {
@@ -321,7 +292,6 @@ form.onsubmit = (e) => {
   //   showAlertError(error, TIMEOUT);
   // }
 };
-
 function showAlertSuccess(msg, timeout) {
   alertInfo.classList.add('open');
   alertSuccessMsg.innerHTML = msg;

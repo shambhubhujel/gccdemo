@@ -77,7 +77,6 @@ function loadAllClient() {
     email.value = values.email;
   });
 }
-
 function loadAllCleaner() {
   fetch(`${url}/admin?role=cleaner`, {
     headers: { Authorization: 'Bearer ' + token },
@@ -105,28 +104,29 @@ function loadAllCleaner() {
   });
 }
 
+
 function getAllSite() {
   loading.style.display = 'block';
   fetch(`${url}/site`, {
     headers: { Authorization: 'Bearer ' + token },
     method: 'GET',
   })
-    .then((response) => response.json())
-    .then((allSite) => {
-      const sites = allSite.data;
-      console.log('Sites: ', sites);
-      const output = sites.map((site) => {
-        const date = Date.parse(site.date).toString('dd-MM-yyyy');
-        return `
-            <tr>
-              <td>${site.name}</td>
-              <td>${site.cleanerName}</td>
-              <td>${site.email}</td>
-              <td>${site.phone}</td>
-              <td>${site.workSite}</td>
-              <td>${site.address}</td>
-              <td>${site.time}</td>
-              <td>${date}</td>
+  .then((response) => response.json())
+  .then((allSite) => {
+    const sites = allSite.data;
+    console.log('Sites: ', sites);
+    const output = sites.map((site) => {
+      const date = Date.parse(site.date).toString('dd-MM-yyyy');
+      return `
+          <tr>
+            <td>${site.name}</td>
+            <td>${site.cleanerName}</td>
+            <td>${site.email}</td>
+            <td>${site.phone}</td>
+            <td>${site.workSite}</td>
+            <td>${site.address}</td>
+            <td>${site.time}</td>
+            <td>${date}</td>
               <td>${site.detail}</td>
               <td class="text-center">
                 <a id="deleteIcon" href="#" data-delete="${site._id}">

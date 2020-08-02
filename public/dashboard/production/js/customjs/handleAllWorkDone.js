@@ -71,8 +71,8 @@ function getCleanerWorks() {
                     <td>${end}</td>
                     <td>
                         <a id="deleteIcon" href="#" title="Delete" data-delete="${
-                          work._id
-                        }">
+          work._id
+          }">
                             <i class="fa fa-trash fa-2x text-danger"></i>
                         </a>
                     </td>
