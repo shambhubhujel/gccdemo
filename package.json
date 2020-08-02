@@ -2,7 +2,6 @@
     "name": "green-commercial-cleaning-api",
     "private": true,
     "version": "1.0.0",
-    "type": "module",
     "description": "Backend api for Green Conmmercial Cleaning Company",
     "main": "server.js",
     "scripts": {
@@ -29,6 +28,9 @@
         "cookie-parser": "^1.4.5",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
+        "@babel/core": "^7.9.0",
+        "@babel/node": "^7.8.7",
+        "@babel/preset-env": "^7.9.5",
         "express": "^4.17.1",
         "express-mongo-sanitize": "^2.0.0",
         "express-rate-limit": "^5.1.3",
