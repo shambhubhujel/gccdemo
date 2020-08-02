@@ -1,3 +1,5 @@
+require ('babel-register');
+require('./server.es6');
 import 'dotenv/config';
 import express from 'express';
 import morgan from 'morgan';
