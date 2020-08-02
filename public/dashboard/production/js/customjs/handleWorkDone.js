@@ -227,9 +227,10 @@ form.onsubmit = (e) => {
         return;
       }
       const data = location.data[0];
+      const currentLocation = `${data.streetName}, ${data.city} ${data.administrativeLevels.level1short} ${data.zipcode}`;
       const fullAddress = data.formattedAddress;
       // Check user's location to selected work site address
-      if (!fullAddress.includes(workLocation)) {
+      if (!workLocation.includes(currentLocation)) {
         showAlertError(
           `Your current location is ${fullAddress}! `,
           TIMEOUT * 2
