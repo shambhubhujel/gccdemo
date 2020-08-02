@@ -1,10 +1,10 @@
 $(document).ready(function () {
-  const url = 'http://46.101.210.191:5000/api/v1/';
+  const url = 'https://myexample.gq/api/v1/';
   const token = window.localStorage.getItem('admintoken');
   const tBody = document.getElementById('getAllReviews');
 
   function deleteReview(id) {
-    fetch(`http://46.101.210.191:5000/api/v1/reviews/${id}`, {
+    fetch(`https://myexample.gq/api/v1/reviews/${id}`, {
       headers: {
         Authorization: 'Bearer ' + token,
         Accept: 'application/json',
@@ -19,7 +19,7 @@ $(document).ready(function () {
   }
 
   function editPublish(id, publish) {
-    fetch(`http://46.101.210.191:5000/api/v1/reviews/${id}`, {
+    fetch(`https://myexample.gq/api/v1/reviews/${id}`, {
       headers: {
         Authorization: 'Bearer ' + token,
         Accept: 'application/json',

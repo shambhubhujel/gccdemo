@@ -1,4 +1,4 @@
-const url = 'http://46.101.210.191:5000/api/v1';
+const url = 'https://myexample.gq/api/v1';
 const token = window.localStorage.getItem('admintoken');
 const isClient = window.localStorage.getItem('isAdmin') === 'client';
 const ID = window.localStorage.getItem('adminid');

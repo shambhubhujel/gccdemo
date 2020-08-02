@@ -1,4 +1,4 @@
-const url = 'http://46.101.210.191:5000/api/v1';
+const url = 'https://myexample.gq/api/v1';
 const token = window.localStorage.getItem('admintoken');
 const tBody = document.getElementById('workDoneTBody');
 const cleanerTBody = document.getElementById('cleanerShiftTBody');
