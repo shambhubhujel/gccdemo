@@ -2,6 +2,7 @@
     "name": "green-commercial-cleaning-api",
     "private": true,
     "version": "1.0.0",
+    "type": "module",
     "description": "Backend api for Green Conmmercial Cleaning Company",
     "main": "server.js",
     "scripts": {
