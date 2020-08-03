@@ -103,13 +103,13 @@ function loadAllSite() {
         return date === currentDate;
       });
       let output = ``;
-      output += `<option value="">Select a Client</option>`;
+      output += `<option value="">Select a WorkSite</option>`;
       output += filteredSite.map((site) => {
         return site.done
           ? null
           : `<option id='${site._id}' value='${site.address}'>
-          ${site.address}, ${site.time}
-        </option>`;
+                ${site.address}, ${site.time}
+              </option>`;
       });
       selectOption.innerHTML = output;
     });
@@ -157,14 +157,14 @@ function getCleanerWorks() {
                     <td>${work.address}</td>
                     <td>
                     ${work.photo
-                      .map((img) => {
-                        return `
+            .map((img) => {
+              return `
                             <a href="${img}"target="_blank">
                             <img src="${img}" alt="client image" width="100px" >
                             </a>
                         `;
-                      })
-                      .join(' ')}
+            })
+            .join(' ')}
                     </td>
                     <td>
                       ${date}
@@ -172,8 +172,8 @@ function getCleanerWorks() {
                     <td>${start}</td>
                     <td>${end}</td>
                     <td class="text-center" style="vertical-align:middle">${
-                      end ? btnDisable : btnEnable
-                    }</td>
+          end ? btnDisable : btnEnable
+          }</td>
                 </tr>
                 `;
       });
