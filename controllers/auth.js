@@ -18,7 +18,7 @@ export const register = asyncHandler(async (req, res, next) => {
 // @access    Public
 export const login = asyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email, password);
+  //console.log(email, password);
 
   // Validate email & password
   if (!email || !password) {
