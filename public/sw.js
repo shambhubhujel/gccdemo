@@ -46,8 +46,7 @@ const assets = [
   'https://myexample.gq/fonts/fontawesome-webfont3e6e.woff2?v=4.7.0',
   'https://fonts.googleapis.com/css?family=Montserrat',
   'https://fonts.gstatic.com/s/raleway/v17/1Ptug8zYS_SKggPNyC0ITw.woff2',
-  'https://myexample.gq/manifest.json',
-  
+
 
 
 
