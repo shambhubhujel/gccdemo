@@ -50,6 +50,7 @@ $(document).ready(function () {
       output += `
       <li><a><i class="fa fa-home"></i> Dashboard </a>
         <ul class="nav child_menu">
+          <li><a href="index.html">Home</a></li>
           <li><a href="client_mySites.html">My Sites</li>
         </ul>
       </li>`;
@@ -58,6 +59,7 @@ $(document).ready(function () {
       output += `
       <li><a><i class="fa fa-table"></i> Employee Details <span class="fa fa-chevron-down"></span></a>
       <ul class="nav child_menu">
+        <li><a href="index.html">Home</a></li>
         <li><a href="cleaners_details.html">Cleaner Details</a></li>
         <li><a href="workLocation_withPhotos.html">Cleaner's WorkDone Details</a></li>
         <li><a href="supervisors_details.html">Supervisor Details</a></li>
