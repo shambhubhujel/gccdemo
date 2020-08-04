@@ -41,7 +41,16 @@ const assets = [
   './fonts/glyphicons-halflings-regular.eot',
   './manifest.json',
   './images/logo/green_commercial_logo.png',
-  './images/pwa_icons/96px.png'
+  './images/pwa_icons/96px.png',
+  'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,600,700,800|Josefin+Sans:400,600,700',
+  'https://myexample.gq/fonts/fontawesome-webfont3e6e.woff2?v=4.7.0',
+  'https://fonts.googleapis.com/css?family=Montserrat',
+  'https://fonts.gstatic.com/s/raleway/v17/1Ptug8zYS_SKggPNyC0ITw.woff2',
+  'https://myexample.gq/manifest.json',
+  
+
+
+
 ];
 
 // cache size limit function
