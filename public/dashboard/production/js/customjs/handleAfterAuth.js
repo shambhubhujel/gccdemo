@@ -70,6 +70,7 @@ $(document).ready(function () {
       output += `
       <li><a><i class="fa fa-users"></i> Cleaner's Task </a>
       <ul class="nav child_menu">
+        <li><a href="index.html">Home</a></li>
         <li><a href="cleaner_workdone_submission.html"><i class="fa fa-file"></i> WorkDone Submission</a></li>
       </ul>
       </li>`;
