@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../images/logo/green_commercial_logo.png" type="image/png" />
 
-    <title>Green Commercial Cleaning </title>
+    <title>Green Commercial Cleaning</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -134,13 +134,13 @@
                 </div>
                 <!-- Alert Error End -->
 
-                <div class=" row">
 
+                <div class=" row">
                     <!-- details table home start here-->
                     <div class="col-md-12 col-sm-12 ">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Work Done Details </h2>
+                                <h2>Supervisor's Details</h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -153,22 +153,23 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="card-box table-responsive">
-                                            <table id="workDoneTable" class="table table-striped table-bordered"
+                                            <table id="clientTable"
+                                                class="table table-striped table-bordered text-center"
                                                 style="width:100%">
                                                 <thead>
                                                     <tr>
                                                         <th>Name</th>
-                                                        <th>Worked Location / Address</th>
-                                                        <th>Images</th>
-                                                        <th>Date</th>
-                                                        <th>Start Shift</th>
-                                                        <th>End Shift</th>
+                                                        <th>Email</th>
+                                                        <th>Address</th>
+                                                        <th>Phone</th>
+                                                        <th>Office</th>
+                                                        <th>age</th>
+                                                        <th>Joined Date</th>
                                                         <th>Delete</th>
                                                     </tr>
                                                 </thead>
+                                                <tbody id="clientTBody">
 
-
-                                                <tbody id="workDoneTBody">
                                                 </tbody>
                                             </table>
                                         </div>
@@ -180,7 +181,6 @@
                     <!-- details table home end here -->
 
                 </div>
-
 
             </div>
             <!-- /page content -->
@@ -195,6 +195,7 @@
                 <div class="clearfix"></div>
             </footer>
             <!-- /footer content -->
+
         </div>
     </div>
 
@@ -214,13 +215,26 @@
     <script src="../vendors/iCheck/icheck.min.js"></script>
     <!-- Skycons -->
     <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
     <!-- DateJS -->
     <script src="../vendors/DateJS/build/date.js"></script>
-    <!-- Custom User Scripts -->
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+
+    <!-- Custom  Scripts -->
     <script src="./js/customjs/handleBeforeAuth.js"></script>
     <script src="./js/customjs/handleAfterAuth.js"></script>
-    <script src="./js/customjs/handleAllWorkDone.js"></script>
-
     <script>
         const loggedAdmin = document.getElementById('adminUser');
         let output = `
@@ -229,6 +243,7 @@
 
         loggedAdmin.innerHTML = output;
     </script>
+    <script src="./js/customjs/handleAllClients.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
     <!-- bootstrap-daterangepicker -->

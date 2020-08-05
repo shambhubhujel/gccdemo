@@ -56,11 +56,23 @@ function locationError(err) {
   );
 }
 
-navigator.geolocation.getCurrentPosition(
-  locationSuccess,
-  locationError,
-  options
-);
+const geolocation = new Promise((resolve, reject) => {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      resolve(() => locationSuccess(position));
+    },
+    (error) => {
+      reject(() => locationError(error));
+    },
+    options
+  );
+}).catch((error) => error);
+
+// navigator.geolocation.getCurrentPosition(
+//   locationSuccess,
+//   locationError,
+//   options
+// );
 
 function loadAllSite() {
   fetch(`${url}/site/cleaner/${ID}`, {
@@ -103,13 +115,13 @@ function loadAllSite() {
         return date === currentDate;
       });
       let output = ``;
-      output += `<option value="">Select a WorkSite</option>`;
+      output += `<option value="">Select a Client</option>`;
       output += filteredSite.map((site) => {
         return site.done
           ? null
           : `<option id='${site._id}' value='${site.address}'>
-                ${site.address}, ${site.time}
-              </option>`;
+          ${site.address}, ${site.time}
+        </option>`;
       });
       selectOption.innerHTML = output;
     });
@@ -129,7 +141,6 @@ function getCleanerWorks() {
     .then((response) => response.json())
     .then((allWorkDone) => {
       const workDone = allWorkDone.data;
-      //console.log('allWorkDone: ', workDone);
 
       // Delete table if #workDoneTable exists
       if ($.fn.DataTable.isDataTable('#workDoneTable')) {
@@ -155,6 +166,7 @@ function getCleanerWorks() {
                 <tr>
                     <td>${work.name}</td>
                     <td>${work.address}</td>
+                    <td>${work.finishedAddress || ''}</td>
                     <td>
                     ${work.photo
             .map((img) => {
@@ -171,13 +183,12 @@ function getCleanerWorks() {
                     </td>
                     <td>${start}</td>
                     <td>${end}</td>
-                    <td class="text-center" style="vertical-align:middle">${
+                    <td class="text-center" style="vertical-align:middle; min-width:170px">${
           end ? btnDisable : btnEnable
           }</td>
                 </tr>
                 `;
       });
-      // console.log('output: ', output);
       tBody.innerHTML = output.join(' ');
       $('#workDoneTable').DataTable();
       loading.style.display = 'none';
@@ -196,9 +207,13 @@ function getCleanerWorks() {
 //Finish Work
 modalForm.onsubmit = async (e) => {
   e.preventDefault();
+  const currentLocation = await geolocation;
+  currentLocation();
   const endShiftTime = new Date();
   const formData = new FormData(modalForm);
   formData.append('finishedAt', endShiftTime);
+  formData.append('lat', latitude);
+  formData.append('lon', longitude);
   try {
     loading.style.display = 'block';
     let response = await fetch(`${url}/work/${workID}`, {
@@ -227,72 +242,83 @@ modalForm.onsubmit = async (e) => {
   }
 };
 
-// Add Work
+// Start Work
 form.onsubmit = (e) => {
   e.preventDefault();
   loading.style.display = 'block';
   const formData = new FormData(form);
 
-  // Get User's current location
-  fetch(`${url}/work/${latitude}/${longitude}`, {
-    headers: {
-      Authorization: 'Bearer ' + token,
-    },
-    method: 'GET',
-  })
-    .then((response) => response.json())
-    .then((location) => {
-      // If user request more than 5 times in 1min, prevent user from submitting form
-      if (!location.success) {
-        showAlertError(location.message, TIMEOUT);
-        return;
-      }
+  // Get current location
+  geolocation
+    .then((geolocation) => {
+      geolocation();
 
-      const data = location.data[0];
-      const currentLocation = `${data.streetName}, ${data.city} ${data.administrativeLevels.level1short} ${data.zipcode}`;
-      const fullAddress = data.formattedAddress;
-      // Check user's location to selected work site address
-      if (!workLocation.includes(currentLocation)) {
-        showAlertError(
-          `Your current location is ${fullAddress}! `,
-          TIMEOUT * 2
-        );
-        loading.style.display = 'none';
-        return;
-      }
-
-      // Start user's shift
-      formData.append('address', fullAddress);
-      formData.append('workDate', moment().toDate());
-      formData.append('id', currentSiteID);
-
-      // Post user work
-      fetch(`${url}/work/`, {
+      // Get User's current location
+      fetch(`${url}/work/${latitude}/${longitude}`, {
         headers: {
           Authorization: 'Bearer ' + token,
         },
-        method: 'POST',
-        body: formData,
+        method: 'GET',
       })
         .then((response) => response.json())
-        .then((result) => {
-          console.log('Result: ', result);
-          loading.style.display = 'none';
-
-          if (!result.success) {
-            showAlertError(result.error, TIMEOUT);
+        .then((location) => {
+          // If user request more than 5 times in 1min, prevent user from submitting form
+          if (!location.success) {
+            showAlertError(location.message, TIMEOUT);
+            loading.style.display = 'none';
             return;
           }
-          loadAllSite();
-          getCleanerWorks();
-          showAlertSuccess('Successfully added Work', TIMEOUT);
+
+          const data = location.data[0];
+          const currentLocation = `${data.streetName}, ${data.city} ${data.administrativeLevels.level1short} ${data.zipcode}`;
+          const fullAddress = data.formattedAddress;
+
+          // Check user's location to selected work site address
+          if (!workLocation.includes(currentLocation)) {
+            showAlertError(
+              `Your current location is ${fullAddress}! `,
+              TIMEOUT * 2
+            );
+            loading.style.display = 'none';
+            return;
+          }
+
+          // Start user's shift
+          formData.append('address', fullAddress);
+          formData.append('workDate', moment().toDate());
+          formData.append('id', currentSiteID);
+
+          // Post user work
+          fetch(`${url}/work/`, {
+            headers: {
+              Authorization: 'Bearer ' + token,
+            },
+            method: 'POST',
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((result) => {
+              loading.style.display = 'none';
+
+              if (!result.success) {
+                showAlertError(result.error, TIMEOUT);
+                return;
+              }
+              loadAllSite();
+              getCleanerWorks();
+              showAlertSuccess('Successfully added Work', TIMEOUT);
+            });
         });
     })
     .catch((error) => {
-      console.error('Error: ', error);
+      error();
       loading.style.display = 'none';
-      showAlertError(error, TIMEOUT);
     });
+  // .catch((error) => {
+  //   console.error('Error: ', error);
+  //   loading.style.display = 'none';
+  //   showAlertError(error, TIMEOUT);
+  // });
 
   // Check if location matched
   // try {

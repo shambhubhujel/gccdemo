@@ -2,6 +2,7 @@ const staticCacheName = 'site-static-v3';
 const dynamicCacheName = 'site-dynamic-v3';
 const assets = [
   './404.html',
+  './welcome.html',
   './js/vendor/modernizr-2.8.3.min.js',
   './js/vendor/jquery-1.12.0.min.js',
   './js/vendor/jquery-3.3.1.min.js',
@@ -46,46 +47,42 @@ const assets = [
   'https://myexample.gq/fonts/fontawesome-webfont3e6e.woff2?v=4.7.0',
   'https://fonts.googleapis.com/css?family=Montserrat',
   'https://fonts.gstatic.com/s/raleway/v17/1Ptug8zYS_SKggPNyC0ITw.woff2',
-
-
-
-
 ];
 
 // cache size limit function
 const limitCacheSize = (name, size) => {
-  caches.open(name).then(cache => {
-    cache.keys().then(keys => {
-      if(keys.length > size){
-        cache.delete(keys[0]).then(limitCacheSize(name, size));
-      }
+    caches.open(name).then(cache => {
+        cache.keys().then(keys => {
+            if (keys.length > size) {
+                cache.delete(keys[0]).then(limitCacheSize(name, size));
+            }
+        });
     });
-  });
 };
 
 // install event
 self.addEventListener('install', evt => {
-  console.log('service worker installed');
-  evt.waitUntil(
-    caches.open(staticCacheName).then((cache) => {
-      console.log('caching shell assets');
-      cache.addAll(assets);
-    })
-  );
+    console.log('service worker installed');
+    evt.waitUntil(
+        caches.open(staticCacheName).then((cache) => {
+            console.log('caching shell assets');
+            cache.addAll(assets);
+        })
+    );
 });
 
 // activate event
 self.addEventListener('activate', evt => {
-  console.log('service worker activated');
-  evt.waitUntil(
-    caches.keys().then(keys => {
-      console.log(keys);
-      return Promise.all(keys
-        .filter(key => key !== staticCacheName && key !== dynamicCacheName)
-        .map(key => caches.delete(key))
-      );
-    })
-  );
+    console.log('service worker activated');
+    evt.waitUntil(
+        caches.keys().then(keys => {
+            console.log(keys);
+            return Promise.all(keys
+                .filter(key => key !== staticCacheName && key !== dynamicCacheName)
+                .map(key => caches.delete(key))
+            );
+        })
+    );
 });
 
 // fetch events

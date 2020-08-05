@@ -40,6 +40,13 @@
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <link href="../build/css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="../../css/custom.css">
+    <!-- PWA  -->
+    <link rel="manifest" href="../../manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="../../images/pwa_icons/96px.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+    <!-- End PWA -->
 
 </head>
 
@@ -49,7 +56,8 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar" style="border: 0;">
-                        <a href="index.html" class="site_title"><img src="../../images/logo/green_commercial_logo.png" alt="GCC_Logo" height="50px" width="50px">
+                        <a href="index.html" class="site_title"><img src="../../images/logo/green_commercial_logo.png"
+                                alt="GCC_Logo" height="50px" width="50px">
                         </a>
                     </div>
 
@@ -58,14 +66,14 @@
 
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                        <div  class="menu_section">
-                          <ul id="showhideMenus" class="nav side-menu">
+                        <div class="menu_section">
+                            <ul id="showhideMenus" class="nav side-menu">
 
-                          </ul>
+                            </ul>
 
                         </div>
 
-                      </div>
+                    </div>
                     <!-- /sidebar menu -->
                 </div>
             </div>
@@ -79,8 +87,9 @@
                     <nav class="nav navbar-nav">
                         <ul class=" navbar-right">
                             <li class="nav-item dropdown open" style="padding-left: 15px;">
-                                <a href="javascript:;" id="adminUser" class="user-profile dropdown-toggle" aria-haspopup="true"
-                                    id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                <a href="javascript:;" id="adminUser" class="user-profile dropdown-toggle"
+                                    aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown"
+                                    aria-expanded="false">
                                     <img src="" alt="">User Name
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right"
@@ -101,25 +110,25 @@
             </div>
             <!-- /top navigation -->
 
-                <!-- Alert Info -->
-                <div id="alertInfo" class="row alert__info">
-                    <div class="alert alert-success alert-dismissible col-md-12 col-sm-12" role="alert">
-                        <h4 id="alertSuccessMsg" class="text-center">
+            <!-- Alert Info -->
+            <div id="alertInfo" class="row alert__info">
+                <div class="alert alert-success alert-dismissible col-md-12 col-sm-12" role="alert">
+                    <h4 id="alertSuccessMsg" class="text-center">
 
-                        </h4>
-                    </div>
+                    </h4>
                 </div>
-                <!-- Alert Info End -->
+            </div>
+            <!-- Alert Info End -->
 
-                <!-- Alert Error -->
-                <div id="alertError" class="row alert__info">
-                    <div class="alert alert-danger alert-dismissible col-md-12 col-sm-12" role="alert">
-                        <h4 id="alertErrorMsg" class="text-center">
+            <!-- Alert Error -->
+            <div id="alertError" class="row alert__info">
+                <div class="alert alert-danger alert-dismissible col-md-12 col-sm-12" role="alert">
+                    <h4 id="alertErrorMsg" class="text-center">
 
-                        </h4>
-                    </div>
+                    </h4>
                 </div>
-                <!-- Alert Error End -->
+            </div>
+            <!-- Alert Error End -->
 
             <!-- page content -->
             <div class="right_col" role="main">
@@ -228,21 +237,21 @@
     <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
     <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
     <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    
-     <!-- Custom User Scripts -->
-     <script src="./js/customjs/handleBeforeAuth.js"></script>
-     <script src="./js/customjs/handleAfterAuth.js"></script>
-     <script>
-         const loggedAdmin = document.getElementById('adminUser');
-         let output = `
+
+    <!-- Custom User Scripts -->
+    <script src="./js/customjs/handleBeforeAuth.js"></script>
+    <script src="./js/customjs/handleAfterAuth.js"></script>
+    <script>
+        const loggedAdmin = document.getElementById('adminUser');
+        let output = `
                      <img src="${window.localStorage.getItem('avatar')}" alt="">${window.localStorage.getItem('loggedadmin')}
                  </a>`;
- 
-         loggedAdmin.innerHTML = output;
-     </script>
-     <script src="./js/customjs/handleApplicant.js"></script>
-     <!-- Custom Theme Scripts -->
-     <script src="../build/js/custom.min.js"></script>
+
+        loggedAdmin.innerHTML = output;
+    </script>
+    <script src="./js/customjs/handleApplicant.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
     <!-- bootstrap-daterangepicker -->
     <script src="../vendors/moment/min/moment.min.js"></script>
     <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
@@ -262,8 +271,9 @@
     <script src="../vendors/jszip/dist/jszip.min.js"></script>
     <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
     <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="../../js/app.js"></script>
 
-   
+
 
 </body>
 

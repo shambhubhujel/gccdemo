@@ -3,7 +3,7 @@ $(document).ready(function () {
     const token = window.localStorage.getItem('admintoken');
     const tBody = document.getElementById('getAllReviews');
     function deleteReview(id) {
-        fetch(`https://myexample.gq/api/v1/reviews/${id}`, {
+        fetch(`${url}reviews/${id}`, {
             headers: {
                 Authorization: 'Bearer ' + token,
                 Accept: 'application/json',
@@ -17,7 +17,7 @@ $(document).ready(function () {
             });
     }
     function editPublish(id, publish) {
-        fetch(`https://myexample.gq/api/v1/reviews/${id}`, {
+        fetch(`${url}reviews/${id}`, {
             headers: {
                 Authorization: 'Bearer ' + token,
                 Accept: 'application/json',

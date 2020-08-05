@@ -24,11 +24,12 @@ const WorkSchema = new mongoose.Schema({
   phone: String,
   subject: String,
   message: String,
+  finishedAt: Date,
+  finishedAddress: String,
   createdAt: {
     type: Date,
     default: Date.now,
   },
-  finishedAt: Date,
 });
 
 const Work = mongoose.model('work', WorkSchema);

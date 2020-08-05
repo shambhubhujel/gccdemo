@@ -1,7 +1,7 @@
 {
     "name": "Green Commercial Cleaning",
     "short_name": "GCC",
-    "start_url": "./404.html",
+    "start_url": "./welcome.html",
     "display": "standalone",
     "background_color": "#FFE9D2",
     "theme_color": "#FFE1C4",

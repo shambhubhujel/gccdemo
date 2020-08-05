@@ -26,6 +26,7 @@ $(document).ready(function () {
 
       <li><a><i class="fa fa-bar-chart-o"></i>Client Sites <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
+          <li><a href="all_clients.html">All Clients</a></li>
           <li><a href="clients_details.html">Work Sites(Clients) Details</a></li>
           <li><a href="clients_reviews.html">Reviews</a></li>
           <li><a href="clients_complains.html">Complains</a></li>
