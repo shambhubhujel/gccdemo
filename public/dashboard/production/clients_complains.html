@@ -222,7 +222,7 @@
         function deleteComplain(id) {
             const token = window.localStorage.getItem('admintoken');
             //console.log("ID:", id);
-            fetch(`https://myexample.gq/api/v1/complain/${id}`, {
+            fetch(`http://54.79.196.224/api/v1/complain/${id}`, {
                     headers: {
                         'Authorization': 'Bearer ' + token,
                         'Accept': 'application/json',

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const url = 'https://myexample.gq/api/v1/';
+    const url = 'http://54.79.196.224/api/v1/';
     const token = window.localStorage.getItem('admintoken');
     const tBody = document.getElementById('getAllReviews');
     function deleteReview(id) {

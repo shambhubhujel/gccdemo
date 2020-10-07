@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
-const url = 'https://myexample.gq/api/v1';
+const url = 'http://54.79.196.224/api/v1';
 const workBody = document.getElementById('workBody');
 let title = null;
 
