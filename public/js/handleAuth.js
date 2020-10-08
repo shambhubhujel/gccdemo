@@ -1,7 +1,7 @@
 $(document).ready(function () {
   var Loader = document.getElementById('loading');
   var SLoader = document.getElementById('signuploading');
-  const url = 'http://localhost:5000/api/v1/';
+  const url = 'https://myexample.gq/api/v1/';
   function UserLogin() {
     if (localStorage.getItem('loggeduser') === null || undefined) {
       try {

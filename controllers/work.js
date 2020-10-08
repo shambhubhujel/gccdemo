@@ -91,6 +91,10 @@ export const updateWork = asyncHandler(async (req, res, next) => {
     const fileLocation = fileArray.map((file) => file.location);
     req.body.photo = fileLocation;
   }
+  // Set shift end address
+  const { lat, lon } = req.body;
+  const finishedAddress = await GeoCoder.reverse({ lat, lon });
+  req.body.finishedAddress = finishedAddress[0].formattedAddress;
   let work = await Work.findById(req.params.id);
 
   if (!work) {

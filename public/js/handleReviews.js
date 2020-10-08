@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const url = 'http://localhost:5000/api/v1/';
+  const url = 'https://myexample.gq/api/v1/';
   const Loader = document.getElementById('runLoader');
   const formElement = document.getElementById('sendReviewForm');
   // Fetch All Reviews

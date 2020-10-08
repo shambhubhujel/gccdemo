@@ -1,4 +1,4 @@
-const url = 'http://localhost:5000/api/v1';
+const url = 'https://myexample.gq/api/v1';
 const token = window.localStorage.getItem('admintoken');
 const tBody = document.getElementById('applicantTBody');
 
@@ -50,7 +50,7 @@ function getAllApplicants() {
                   <td><button id="deleteIcon" type="button" class="btn" title="Delete" data-delete ="${
           applicant._id
           }"><i
-                              class="fa fa-trash"></i></button>
+                              class="fa fa-trash text-danger"></i></button>
                   </td>
               </tr>`;
       });

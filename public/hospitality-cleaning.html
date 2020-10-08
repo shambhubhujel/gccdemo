@@ -32,6 +32,13 @@
 
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- PWA  -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="images/pwa_icons/96px">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+    <!-- End PWA -->
 </head>
 
 <body>
@@ -97,21 +104,21 @@
                                     </li>
                                     <li><a href="about.html">ABOUT US</a></li>
                                     <li><a class="active" href="service.html">SERVICES</a></li>
-                                    <li><a href="index.html">BLOGS</a> </li>
                                     <li><a href="career.html">CAREERS</a> </li>
                                     <li><a href="contact.html">CONTACT</a></li>
+                                    <li><a href="./dashboard/production/login.html">DASHBOARD</a> </li>
 
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
                                 <nav id="mobile_dropdown">
                                     <ul>
-                                        <li><a href="index.html">Home</a> </li>
+                                        <li><a href="index.html">HOME</a> </li>
                                         <li><a href="about.html">ABOUT US</a> </li>
                                         <li><a class="active" href="service.html">SERVICES</a> </li>
-                                        <li><a href="index.html">BLOGS</a> </li>
                                         <li><a href="career.html">CAREERS</a> </li>
                                         <li><a href="contact.html">CONTACT</a> </li>
+                                        <li><a href="./dashboard/production/login.html">DASHBOARD</a> </li>
 
                                     </ul>
                                 </nav>
@@ -461,7 +468,7 @@
                                 <i class="fa fa-globe" aria-hidden="true"></i>
                             </div>
                             <div class="ht__address__details">
-                                <p>info@greencomercialclaening.com.au</p>
+                                <p>info@greencommercialcleaning.com.au</p>
                                 <p>Rajan@greencommercialcleaning.com.au</p>
                             </div>
                         </div>
@@ -517,9 +524,9 @@
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="about.html">About Us</a></li>
                                         <li><a href="service.html">Services</a></li>
-                                        <li><a href="index.html">Blogs</a></li>
                                         <li><a href="career.html">Careers</a> </li>
                                         <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="./dashboard/production/login.html">Dashboard</a> </li>
                                     </ul>
                                 </div>
                             </div>
@@ -552,20 +559,7 @@
                         </div>
                         <!-- End Single Footer -->
                         <!-- Start Single Footer -->
-                        <div class="col-md-2 col-lg-2 col-sm-6 col-xs-12 smt-40 xmt-40">
-                            <div class="footer foo">
-                                <div class="footer__widget">
-                                    <h2 class="text--theme">Latest Post</h2>
-                                    <div class="footer__link mt--20">
-                                        <ul class="footer-blog">
-                                            <li><a href="career.html">On the other hand,</a></li>
-                                            <li><a href="career.html">On the other hand,</a></li>
-                                            <li><a href="career.html">On the other hand,</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <!-- End Single Footer -->
                     </div>
                 </div>
@@ -576,7 +570,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="copyright__inner">
-                            <p>Copyright <a href="http://softtechmultimedia.com" target="_blank">Softtech
+                            <p>Copyright © 2020, <a href="http://softtechmultimedia.com" target="_blank">Softtech
                                     Multimedia</a>
                                 All Rights Reserved 2020</p>
                         </div>
@@ -604,6 +598,7 @@
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
     <script src="./js/handleAfterAuth.js"></script>
+    <script src="./js/app.js"></script>
 
 </body>
 

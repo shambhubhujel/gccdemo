@@ -20,6 +20,14 @@
   <!-- Custom Theme Style -->
   <link href="../build/css/custom.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <!-- PWA  -->
+  <link rel="manifest" href="../../manifest.json">
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="../../images/pwa_icons/96px.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+  <meta name="theme-color" content="#FFE1C4">
+  <!-- End PWA -->
 </head>
 
 <body class="login">
@@ -40,7 +48,7 @@
               <input type="password" id="password" class="form-control" placeholder="Password" required="true" />
             </div>
             <div>
-              <a class="btn btn-default" id="btnsubmit" href="index.html">Log in</a>
+              <a class="btn btn-default" id="btnsubmit" href="./index.html">Log in</a>
               <a class="reset_pass" href="#forget_password">Lost your password?</a>
             </div>
 
@@ -52,9 +60,10 @@
               <br />
 
               <div>
+                <a href="../../index.html">
                 <img src="../../images/logo/green_commercial_logo.png" width="90px" alt="">
                 <h1> Green Commercial
-                  Cleaning</h1>
+                  Cleaning</h1></a>
                 <p>&copy; <span id="spanCopy"></span> All Rights Reserved. <a
                     href="https://www.softtechmultimedia">SoftTech
                     Multimedia Pvt. Ltd.</a>
@@ -74,7 +83,8 @@
             <br />
 
             <div>
-              <img src="../../images/logo/green_commercial_logo.png" width="90px" alt="">
+              <a href="../../index.html">
+              <img src="../../images/logo/green_commercial_logo.png" width="90px" alt=""></a>
               <h1> Green Commercial
                 Cleaning</h1>
               <p>&copy; <span id="spanCopy"></span> All Rights Reserved. <a
@@ -96,6 +106,7 @@
   </script>
   <!--Custome js scripts  -->
   <script type="text/javascript" src="./js/customjs/handleAuth.js"></script>
+  <script src="../../js/app.js"></script>
 </body>
 
 </html>

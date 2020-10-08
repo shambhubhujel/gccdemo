@@ -448,6 +448,7 @@ color: #fefefe;
     }
     .menu__btn{
         margin-top: -29px !important;
+        padding-right: 6px;
     }
     .top-contact{
     width: 100%;

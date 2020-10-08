@@ -1,4 +1,4 @@
-const url = 'http://localhost:5000/api/v1';
+const url = 'https://myexample.gq/api/v1';
 const workBody = document.getElementById('workBody');
 
 fetch(`${url}/vacancy`, {

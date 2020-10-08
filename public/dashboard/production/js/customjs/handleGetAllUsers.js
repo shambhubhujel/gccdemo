@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const url = 'http://localhost:5000/api/v1/';
+  const url = 'https://myexample.gq/api/v1/';
   const token = window.localStorage.getItem('admintoken');
   let countAdmin = 0;
   let countSupevisor = 0;
@@ -10,6 +10,41 @@ $(document).ready(function () {
 
   countReview = document.getElementById('reviewCounter');
   countComplain = document.getElementById('complainCounter');
+  function topTiles_Counter() {
+    fetch(`${url}admin/`, {
+      headers: { Authorization: 'Bearer ' + token },
+      method: 'GET',
+    })
+      .then((response) => response.json())
+      .then((allUsers) => {
+        //console.log(allUsers);
+        const usersData = allUsers.data;
+        //console.log('ALL USERS:', usersData);
+        //console.log(usersData.length);
+        for (let index = 0; index < usersData.length; index++) {
+          var item_count = usersData[index];
+          if (item_count.role === 'client') {
+            countClient = countClient + 1;
+          }
+          if (item_count.role === 'cleaner') {
+            countCleaner = countCleaner + 1;
+          }
+          if (item_count.role === 'admin') {
+            countAdmin = countAdmin + 1;
+          }
+          if (item_count.role === 'supervisor') {
+            countSupevisor = countSupevisor + 1;
+          }
+        }
+        document.getElementById('adminCounter').innerText = countAdmin;
+        document.getElementById('clientCounter').innerText = countClient;
+        document.getElementById('supervisorCounter').innerText = countSupevisor;
+        document.getElementById('cleanerCounter').innerText = countCleaner;
+        //Do later for reviews and complains counters too
+        countComplain.innerText = window.localStorage.getItem('countComplains');
+        countReview.innerText = window.localStorage.getItem('countReviews');
+      })
+  }
 
   function getAllUsers() {
     fetch(`${url}admin/`, {
@@ -39,28 +74,9 @@ $(document).ready(function () {
           <td>${date}</td>
           </tr>
           `;
-          if (item.role === 'client') {
-            countClient = countClient + 1;
-          }
-          if (item.role === 'cleaner') {
-            countCleaner = countCleaner + 1;
-          }
-          if (item.role === 'admin') {
-            countAdmin = countAdmin + 1;
-          }
-          if (item.role === 'supervisor') {
-            countSupevisor = countSupevisor + 1;
-          }
         }
 
         document.getElementById('userData').innerHTML = output;
-        document.getElementById('adminCounter').innerText = countAdmin;
-        document.getElementById('clientCounter').innerText = countClient;
-        document.getElementById('supervisorCounter').innerText = countSupevisor;
-        document.getElementById('cleanerCounter').innerText = countCleaner;
-        //Do later for reviews and complains counters too
-        countComplain.innerText = window.localStorage.getItem('countComplains');
-        countReview.innerText = window.localStorage.getItem('countReviews');
       })
       .then(() => {
         var table = $('#allUserTable').DataTable();
@@ -74,6 +90,6 @@ $(document).ready(function () {
       })
       .catch((err) => console.log(err));
   }
-
+  topTiles_Counter();
   getAllUsers();
 });

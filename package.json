@@ -8,7 +8,6 @@
         "start": "NODE_ENV=production babel-node server",
         "dev": "nodemon --exec babel-node server",
         "test": "echo \"Error: no test specified\" && exit 1"
-        
     },
     "author": "Abiral Rai",
     "license": "ISC",
@@ -16,10 +15,10 @@
         "@babel/core": "^7.9.0",
         "@babel/node": "^7.8.7",
         "@babel/preset-env": "^7.9.5",
-        "nodemon": "^2.0.3",
         "mocha": "5.0.0",
-        "unit.js": "2.0.0",
-        "supertest": "3.0.0"
+        "nodemon": "^2.0.3",
+        "supertest": "3.0.0",
+        "unit.js": "^2.1.1"
     },
     "dependencies": {
         "aws-sdk": "^2.686.0",

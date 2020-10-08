@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const url = 'http://localhost:5000/api/v1/';
+  const url = 'https://myexample.gq/api/v1/';
   const token = window.localStorage.getItem('admintoken');
 
   //Fetch all the complains from db

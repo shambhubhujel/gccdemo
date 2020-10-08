@@ -18,7 +18,7 @@ export const register = asyncHandler(async (req, res, next) => {
 // @access    Public
 export const login = asyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email, password);
+  //console.log(email, password);
 
   // Validate email & password
   if (!email || !password) {
@@ -26,7 +26,9 @@ export const login = asyncHandler(async (req, res, next) => {
   }
 
   // Check for user
-  const user = await User.findOne({ email }).select('+password');
+  const user = await User.findOne({ email: email.toLowerCase() }).select(
+    '+password'
+  );
 
   if (!user) {
     return next(new ErrorResponse('Invalid credentials', 401));
